@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import leetcode from "../../Assets/Projects/leetcode.png";
 import AIS from "../../Assets/Projects/ais_utd_logo.png";
 import website from "../../Assets/Projects/website.png";
+import About from "../About/About";
 
 function Projects() {
   return (
@@ -49,10 +50,11 @@ function Projects() {
             />
           </Col>
 
-
         </Row>
+        <About></About>
       </Container>
     </Container>
+    
   );
 }
 

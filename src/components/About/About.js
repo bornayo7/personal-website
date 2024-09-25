@@ -9,7 +9,7 @@ function About() {
   return (
     <Container fluid className="about-section">
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        {/* <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
             md={7}
             style={{
@@ -30,7 +30,7 @@ function About() {
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
-        </Row>
+        </Row> */}
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>

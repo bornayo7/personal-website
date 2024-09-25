@@ -16,6 +16,7 @@ import {
   SiNextdotjs,
   SiSolidity,
   SiPostgresql,
+  SiAwselasticloadbalancing,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
 
