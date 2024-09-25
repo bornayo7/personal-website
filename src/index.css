@@ -15,15 +15,14 @@ body {
   font-family: "Raleway", sans-serif !important; /* Changed to sans-serif for better readability */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, var(--primary-bg), var(--secondary-bg)); /* Updated to dark-themed gradient */
+  background-image: linear-gradient(to left, var(--primary-bg), var(--secondary-bg)); /* Dark-themed gradient */
   background-color: var(--primary-bg); /* Fallback background color */
-  color: var(--primary-text); /* Set default text color to light gray */
+  color: var(--primary-text); /* Default text color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Ensuring the root takes full height */
 #root {
   flex: 1;
   display: flex;
@@ -33,12 +32,11 @@ body {
 /* Links Styling */
 a {
   color: var(--accent-color); /* Teal accent for links */
-  text-decoration: none; /* Removed underline to prevent redundancy */
+  text-decoration: none; /* Removed underline */
 }
 
 a:hover {
   color: var(--accent-hover); /* Dark Teal on hover */
-  /* Removed text-decoration: underline; as it's handled in the main CSS */
 }
 
 /* Scrollbar Styling */
@@ -57,7 +55,6 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-hover); /* Dark Teal */
-  border-radius: 12px;
 }
 
 /* Footer Styling */
@@ -72,27 +69,15 @@ a:hover {
   z-index: 1000;
 }
 
-.footer-copywright {
-  text-align: center !important;
-}
-
+.footer-copywright,
 .footer-body {
-  z-index: 1;
   text-align: center !important;
-}
-
-@media (max-width: 767px) {
-  .footer-copywright,
-  .footer-body {
-    text-align: center !important;
-  }
 }
 
 .footer h3 {
   font-size: 1em;
   color: var(--primary-text) !important;
-  margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
+  margin: 0.5em 0 !important;
 }
 
 .footer-icons {
@@ -100,6 +85,7 @@ a:hover {
   padding: 0;
   display: flex;
   justify-content: center;
+  margin: 0.5em 0 !important;
 }
 
 .footer-icons .social-icons {
@@ -128,6 +114,7 @@ a:hover {
 .imp-text-color {
   color: var(--accent-color) !important;
 }
+
 /* Custom Navbar Styles */
 .navbar {
   transition: background-color 0.5s ease;
@@ -155,4 +142,28 @@ a:hover {
 
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(224,224,224, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 767px) {
+  .footer-icons {
+    flex-direction: column;
+  }
+
+  .navbar {
+    padding: 1rem 1rem !important;
+    font-size: 1.4rem !important;
+    background-color: #1A1A1A !important; /* Slightly Lighter Dark */
+  }
+
+  .navbar-nav .nav-item a::after {
+    display: none !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+
+  .footer {
+    padding: 15px 10px !important;
+  }
 }

@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #1E1E1E; /* Updated to Eerie Black */
+  background-color: #1E1E1E; /* Eerie Black */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #E0E0E0; /* Light Gray */
+  padding: 20px;
 }
 
 .App-link {
@@ -30,7 +31,6 @@
 
 .App-link:hover {
   color: #018786; /* Dark Teal on Hover */
-  /* Removed text-decoration: underline; to prevent redundancy */
 }
 
 @keyframes App-logo-spin {
@@ -42,7 +42,7 @@
   }
 }
 
-btn-primary {
+.btn-primary {
   color: #fff !important;
   background-color: #018786 !important; /* Slightly Darker Teal */
   border-color: #018786 !important;
@@ -70,4 +70,24 @@ btn-primary {
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+  .App-header {
+    min-height: auto;
+    padding: 10px;
+    font-size: calc(8px + 2vmin);
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+  }
 }
