@@ -1,10 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg"; // Ensure this image aligns with your theme
+import homeLogo from "../../Assets//Projects/leetcode.png"; // Ensure this image aligns with your theme
 import Home2 from "./Home2";
 import Type from "./Type";
+import About from "../About/About"
 
 function Home() {
+
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -40,6 +42,7 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
+      <About/>
     </section>
   );
 }

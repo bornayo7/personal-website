@@ -20,8 +20,6 @@ function Projects() {
               isBlog={false}
               title="AI Music Genre Classification Project"
               description="Currently developing a machine learning model using a Convolutional Neural Network (CNN) to classify music genres based on audio spectrograms. Utilizing Python, TensorFlow, Librosa, and pandas for ongoing data preprocessing and model training. Building a full-stack web application with React and Node.js to present classification results, allowing users to interact with the system and upload their own music for real-time classification."
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
             />
           </Col>
           <Col md={4} className="project-card">
@@ -32,7 +30,7 @@ function Projects() {
               description="Built a personal portfolio website using React and Node.js to showcase projects and skills. 
               Implemented responsive design and dynamic routing to allow easy navigation. 
               Integrated GitHub for version control and deployed the website using modern web development frameworks."
-              ghLink="https://github.com/soumyajit4419/Chatify"
+              ghLink="https://github.com/bornayo7/personal-website"
               demoLink="https://yashbaruah.com"
             />
           </Col>
@@ -45,8 +43,7 @@ function Projects() {
               description="Collaborated with a small team to develop a verified Discord bot designed for assigning and tracking daily LeetCode challenges. 
               The bot used Node.js for its backend and integrated with Discord’s API to handle user interactions, commands, and data input. 
               Included features for tracking completion, assigning punishments for missed challenges, and automating group activities."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              ghLink="https://github.com/bornayo7/Leetcode-Daily-Bot"
             />
           </Col>
 
