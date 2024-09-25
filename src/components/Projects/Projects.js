@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import leetcode from "../../Assets/Projects/leetcode.png";
+import AIS from "../../Assets/Projects/ais_utd_logo.png";
 
 function Projects() {
   return (
@@ -16,7 +17,7 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
         <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leetcode}
+              imgPath={AIS}
               isBlog={false}
               title="AI Music Genre Classification Project"
               description="Currently developing a machine learning model using a Convolutional Neural Network (CNN) to classify music genres based on audio spectrograms. Utilizing Python, TensorFlow, Librosa, and pandas for ongoing data preprocessing and model training. Building a full-stack web application with React and Node.js to present classification results, allowing users to interact with the system and upload their own music for real-time classification."

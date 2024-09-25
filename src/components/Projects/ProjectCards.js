@@ -7,7 +7,18 @@ import { BsGithub } from "react-icons/bs";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
+        <Card.Img
+          variant="top"
+          src={props.imgPath}
+          alt="card-img"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      </div>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
@@ -25,22 +36,13 @@ function ProjectCards(props) {
             {"GitHub"}
           </Button>
         ) : (
-          <Button
-            variant="secondary" // Optional: Use a different variant for the fallback button
-            style={{ marginLeft: "10px" }}
-          >
-            {"Still In Progress"} {/* Replace this with your desired string */}
+          <Button variant="secondary" style={{ marginLeft: "10px" }}>
+            {"Still In Progress"}
           </Button>
         )}
 
-        {/* <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button> */}
-
         {"\n"}
         {"\n"}
-        {/* If the component contains empty Demo link , it will render the below component  */}
 
         {props.demoLink && (
           <Button
@@ -57,4 +59,5 @@ function ProjectCards(props) {
     </Card>
   );
 }
+
 export default ProjectCards;
