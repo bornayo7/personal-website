@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets//Projects/leetcode.png"; // Ensure this image aligns with your theme
+import homeLogo from "../../Assets/laptop.png"; // Ensure this image aligns with your theme
 import Home2 from "./Home2";
 import Type from "./Type";
 

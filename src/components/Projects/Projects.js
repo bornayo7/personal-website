@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import leetcode from "../../Assets/Projects/leetcode.png";
 import AIS from "../../Assets/Projects/ais_utd_logo.png";
+import website from "../../Assets/Projects/website.png";
 
 function Projects() {
   return (
@@ -25,7 +26,7 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leetcode}
+              imgPath={website}
               isBlog={false}
               title="This Website"
               description="Built a personal portfolio website using React and Node.js to showcase projects and skills. 
