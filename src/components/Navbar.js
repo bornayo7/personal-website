@@ -60,7 +60,7 @@ function NavBar() {
             <Nav.Link as={Link} to="/resume">
               <CgFileDocument /> Resume
             </Nav.Link>
-            <Nav.Link href="mailto:yash.baruah@example.com">
+            <Nav.Link href="mailto:yashbaruah@hotmail.com">
               <AiOutlineMail /> Contact
             </Nav.Link>
             <Nav.Link href="https://github.com/bornayo7" target="_blank" rel="noopener noreferrer">
