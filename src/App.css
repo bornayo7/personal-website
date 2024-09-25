@@ -42,19 +42,31 @@
   }
 }
 
-/* Additional Styling for Buttons (Optional) */
-.btn-primary {
+btn-primary {
   color: #fff !important;
-  background-color: #03DAC6 !important; /* Teal */
-  border-color: #03DAC6 !important;
-}
-
-.btn-primary:hover {
-  background-color: #018786 !important; /* Dark Teal */
+  background-color: #018786 !important; /* Slightly Darker Teal */
   border-color: #018786 !important;
 }
 
-/* Optional: Override Bootstrap Button Focus Styles */
+.btn-primary:hover {
+  color: #fff !important;
+  background-color: #015f58 !important; /* Even Darker Teal on Hover */
+  border-color: #015f58 !important;
+}
+
+.btn-secondary {
+  color: #fff !important;
+  background-color: #5a6268 !important; /* Darker Gray */
+  border-color: #545b62 !important;
+}
+
+.btn-secondary:hover {
+  color: #fff !important;
+  background-color: #4e555b !important; /* Darker Gray on Hover */
+  border-color: #454d54 !important;
+}
+
+/* Removing the focus outline for a clean look */
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
