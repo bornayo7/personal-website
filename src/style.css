@@ -209,6 +209,22 @@ button:focus {
 /* --------- */
 /* Home section */
 /* --------- */
+.star {
+  display: inline-block;
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
 .wave {
   animation-name: wave-animation;
   animation-duration: 2.1s;

@@ -5,7 +5,6 @@ import Home2 from "./Home2";
 import Type from "./Type";
 
 function Home() {
-
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -13,15 +12,16 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
+                Welcome!{" "}
+                <span className="star" role="img" aria-labelledby="star">
+                  ✨
                 </span>
               </h1>
 
               <h1 className="heading-name">
-                I'M
-                <strong className="imp-text-color"> Yash Baruah</strong>
+                I'm
+                <strong className="imp-text-color"> Yash Baruah</strong>,
+                excited to share my story with you!
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
