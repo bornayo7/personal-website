@@ -29,7 +29,7 @@ function ProjectCards(props) {
         {props.ghLink ? (
           <Button
             variant="primary"
-            href={props.demoLink}
+            href={props.ghLink}
             target="_blank"
             style={{ marginLeft: "10px" }}
           >
