@@ -164,6 +164,14 @@ a:hover {
   }
 
   .footer {
-    padding: 15px 10px !important;
+    background-color: var(--secondary-bg);
+    padding: 10px 0;
+    position: relative; /* Not fixed or absolute */
+    width: 100%;
   }
+  
+  .resume-section {
+    padding-bottom: 300px; /* Adjust this value as needed */
+  }
+  
 }

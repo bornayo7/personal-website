@@ -3,6 +3,8 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import Techstack from "../About/Techstack";
+import Toolstack from "../About/Toolstack";
 
 function ProjectCards(props) {
   return (

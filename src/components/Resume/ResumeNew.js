@@ -16,7 +16,7 @@ function ResumeNew() {
 
   return (
     <div>
-      <Container fluid className="resume-section">
+      <Container fluid className="resume-section" style={{ paddingBottom: "120px" }}>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
@@ -41,7 +41,6 @@ function ResumeNew() {
             href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
-            
           >
             <AiOutlineDownload />
             &nbsp;Download Resume
@@ -53,3 +52,4 @@ function ResumeNew() {
 }
 
 export default ResumeNew;
+

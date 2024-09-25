@@ -424,10 +424,16 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: #1E1E1E; /* Eerie Black */
-  bottom: 0 !important;
-  padding: 10px 0 !important;
+  background-color: var(--secondary-bg);
+  padding: 10px 0;
+  position: relative; /* Not fixed or absolute */
+  width: 100%;
 }
+
+.resume-section {
+  padding-bottom: 250px; /* Adjust this value as needed */
+}
+
 
 .footer-copywright,
 .footer-body {
