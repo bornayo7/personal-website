@@ -34,7 +34,7 @@ function Projects() {
               Implemented responsive design and dynamic routing to allow easy navigation. 
               Integrated GitHub for version control and deployed the website using modern web development frameworks."
               ghLink="https://github.com/bornayo7/personal-website"
-              demoLink="https://yashbaruah.com"
+              demoLink="https://bornayo7.github.io/personal-website/"
             />
           </Col>
 
