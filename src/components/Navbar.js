@@ -51,9 +51,9 @@ function NavBar() {
             <Nav.Link as={Link} to="/">
               <AiOutlineHome /> Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/about">
+            {/* <Nav.Link as={Link} to="/about">
               <AiOutlineUser /> About
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link as={Link} to="/project">
               <AiOutlineProject /> Projects
             </Nav.Link>

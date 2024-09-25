@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets//Projects/leetcode.png"; // Ensure this image aligns with your theme
 import Home2 from "./Home2";
 import Type from "./Type";
-import About from "../About/About"
 
 function Home() {
 
@@ -42,7 +41,6 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
-      <About/>
     </section>
   );
 }

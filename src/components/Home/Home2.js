@@ -7,6 +7,8 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import Toolstack from "../About/Toolstack";
+import Techstack from "../About/Techstack";
 
 
 function Home2() {
@@ -59,6 +61,7 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
+
         <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
@@ -103,6 +106,7 @@ function Home2() {
             </ul>
           </Col>
         </Row>
+        
       </Container>
     </Container>
   );
