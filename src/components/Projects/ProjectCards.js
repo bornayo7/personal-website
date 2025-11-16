@@ -4,61 +4,45 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
-
-function ProjectCards(props) {
+function ProjectCards({ imgPath, title, description, ghLink, demoLink, tags = [] }) {
   return (
-    <Card className="project-card-view">
-      <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
-        <Card.Img
-          variant="top"
-          src={props.imgPath}
-          alt="card-img"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
+    <Card className="project-card-view card-surface">
+      <div className="project-image-wrapper">
+        <Card.Img variant="top" src={imgPath} alt={title} />
       </div>
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-
-        {props.ghLink ? (
-          <Button
-            variant="primary"
-            href={props.ghLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <BsGithub /> &nbsp;
-            {"GitHub"}
-          </Button>
-        ) : (
-          <Button variant="secondary" style={{ marginLeft: "10px" }}>
-            {"Still In Progress"}
-          </Button>
+        <div className="project-card-heading">
+          <Card.Title>{title}</Card.Title>
+        </div>
+        {tags.length > 0 && (
+          <div className="project-tags">
+            {tags.map((tag) => (
+              <span key={`${title}-${tag}`} className="tag-pill">
+                {tag}
+              </span>
+            ))}
+          </div>
         )}
-
-        {"\n"}
-        {"\n"}
-
-        {props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
-          </Button>
-        )}
+        <Card.Text>{description}</Card.Text>
+        <div className="project-card-actions">
+          {ghLink && (
+            <Button variant="primary" href={ghLink} target="_blank" rel="noopener noreferrer">
+              <BsGithub /> GitHub
+            </Button>
+          )}
+          {demoLink && (
+            <Button
+              variant="outline-light"
+              href={demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CgWebsite /> Demo
+            </Button>
+          )}
+        </div>
       </Card.Body>
     </Card>
-           
   );
 }
 

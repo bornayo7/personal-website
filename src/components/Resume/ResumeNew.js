@@ -1,55 +1,67 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import pdf from "../../Assets/../Assets/Yash Baruah Resume.pdf";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
+import pdf from "../../Assets/../Assets/Yash Baruah Resume.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
+const resumeHighlights = [
+  "B.S. Computer Science at UT Dallas with an AI/ML specialization",
+  "Professional experience building React + Node.js applications",
+  "Machine learning research focused on computer vision and automation",
+];
+
+const getViewportWidth = () =>
+  typeof window === "undefined" ? 1200 : window.innerWidth;
+
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
+  const [viewportWidth, setViewportWidth] = useState(getViewportWidth);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const handleResize = () => setViewportWidth(getViewportWidth());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const scale = viewportWidth > 1400 ? 1.6 : viewportWidth > 992 ? 1.25 : viewportWidth > 768 ? 0.95 : 0.6;
+
   return (
-    <div>
-      <Container fluid className="resume-section" style={{ paddingBottom: "120px" }}>
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download Resume
-          </Button>
+    <section className="resume-section">
+      <Container>
+        <Row className="align-items-start g-4">
+          <Col lg={7}>
+            <p className="section-eyebrow">Resume</p>
+            <h1 className="section-heading">
+              A closer <span className="imp-text-color">look</span>
+            </h1>
+            <p className="section-description">
+              Download my latest resume for a deeper dive into my coursework, experience, and
+              leadership across UT Dallas initiatives.
+            </p>
+            <ul className="resume-highlight-list">
+              {resumeHighlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </Col>
+          <Col lg={5} className="text-lg-end">
+            <Button href={pdf} target="_blank" variant="primary" className="cta-btn">
+              <AiOutlineDownload /> Download resume
+            </Button>
+          </Col>
         </Row>
-
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download Resume
-          </Button>
+        <Row className="resume-preview justify-content-center">
+          <Col md={10} className="d-flex justify-content-center">
+            <Document file={pdf} className="resume-preview-document">
+              <Page pageNumber={1} scale={scale} renderAnnotationLayer={false} renderTextLayer={false} />
+            </Document>
+          </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 }
 
 export default ResumeNew;
-

@@ -1,49 +1,52 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
 
 function About() {
   return (
-    <Container fluid className="about-section">
+    <section className="about-page">
       <Container>
-        {/* <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+        <Row className="align-items-center g-5">
+          <Col lg={6} className="about-page-text">
+            <p className="section-eyebrow">About</p>
+            <h1 className="section-heading">
+              Know who <span className="imp-text-color">I'm</span>
             </h1>
+            <p className="section-description">
+              I'm pursuing a B.S. in Computer Science at the University of Texas at Dallas with a
+              concentration in Artificial Intelligence and Machine Learning. My coursework and
+              personal research revolve around building models, curating datasets, running
+              experiments, and packaging those learnings inside approachable tools.
+            </p>
+            <p className="section-description">
+              Outside of lectures you'll find me collaborating with AI/ML clubs, refining my own data
+              projects, and teaching peers how to reason about metrics, infrastructure, and shipping
+              prototypes responsibly.
+            </p>
+          </Col>
+          <Col lg={6}>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+        </Row>
+
+        <Row className="g-4 mt-4">
+          <Col md={6}>
+            <div className="skill-panel card-surface">
+              <h3>Professional Skillset</h3>
+              <Techstack />
+            </div>
           </Col>
-        </Row> */}
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
-
-        <Techstack />
-
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1>
-        <Toolstack />
-
+          <Col md={6}>
+            <div className="skill-panel card-surface">
+              <h3>Tools I use</h3>
+              <Toolstack />
+            </div>
+          </Col>
+        </Row>
       </Container>
-    </Container>
+    </section>
   );
 }
 

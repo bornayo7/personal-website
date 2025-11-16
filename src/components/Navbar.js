@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../Assets/logo.png"; // Ensure this is your personalized logo
-import { Link } from "react-router-dom";
-import { AiFillGithub, AiOutlineHome, AiOutlineUser, AiOutlineProject, AiOutlineMail } from "react-icons/ai";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../Assets/logo.png";
+import {
+  AiFillGithub,
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineProject,
+  AiOutlineMail,
+} from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import { FiSun, FiMoon } from "react-icons/fi";
 
-function NavBar() {
+function NavBar({ theme = "light", onToggleTheme = () => {} }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [navColour, setNavColour] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setNavColour(true);
-    } else {
-      setNavColour(false);
-    }
-  };
+  const location = useLocation();
 
   useEffect(() => {
+    const handleScroll = () => setNavColour(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    
-    // Cleanup
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleToggle = () => setIsExpanded((prev) => (prev ? false : "expanded"));
+  const closeMenu = () => setIsExpanded(false);
+  const isActive = (path) => location.pathname === path;
 
   return (
     <Navbar
@@ -37,36 +38,58 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} alt="Yash Baruah Logo" className="img-fluid logo" />
+          <img src={logo} alt="Yash Baruah logo" className="img-fluid logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() => setIsExpanded(isExpanded ? false : "expanded")}
+          onClick={handleToggle}
           className="custom-toggler"
         >
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" onClick={() => setIsExpanded(false)}>
-            <Nav.Link as={Link} to="/">
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="justify-content-end align-items-md-center gap-md-3"
+        >
+          <Nav className="align-items-md-center" onClick={closeMenu}>
+            <Nav.Link as={Link} to="/" className={isActive("/") ? "active" : ""}>
               <AiOutlineHome /> Home
             </Nav.Link>
-            {/* <Nav.Link as={Link} to="/about">
+            <Nav.Link as={Link} to="/about" className={isActive("/about") ? "active" : ""}>
               <AiOutlineUser /> About
-            </Nav.Link> */}
-            <Nav.Link as={Link} to="/project">
+            </Nav.Link>
+            <Nav.Link as={Link} to="/project" className={isActive("/project") ? "active" : ""}>
               <AiOutlineProject /> Projects
             </Nav.Link>
-            <Nav.Link as={Link} to="/resume">
+            <Nav.Link
+              as={Link}
+              to="/resume"
+              className={`resume-link ${isActive("/resume") ? "active" : ""}`}
+            >
               <CgFileDocument /> Resume
             </Nav.Link>
-            <Nav.Link href="mailto:yashbaruah@hotmail.com">
+            <Nav.Link href="mailto:yashbaruah@hotmail.com" rel="noopener noreferrer">
               <AiOutlineMail /> Contact
             </Nav.Link>
-            <Nav.Link href="https://github.com/bornayo7" target="_blank" rel="noopener noreferrer">
+            <Nav.Link
+              href="https://github.com/bornayo7"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <AiFillGithub /> GitHub
             </Nav.Link>
           </Nav>
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={onToggleTheme}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            aria-pressed={theme === "dark"}
+          >
+            {theme === "dark" ? <FiSun /> : <FiMoon />}
+            <span>{theme === "dark" ? "Light" : "Dark"} mode</span>
+          </button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -1,93 +1,18 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #1E1E1E; /* Eerie Black */
   min-height: 100vh;
+  background: transparent;
+}
+
+.app-main {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #E0E0E0; /* Light Gray */
-  padding: 20px;
+  gap: 0;
+  padding-top: 90px;
 }
 
-.App-link {
-  color: #03DAC6; /* Teal Accent */
-}
-
-.App-link:hover {
-  color: #018786; /* Dark Teal on Hover */
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.btn-primary {
-  color: #fff !important;
-  background-color: #018786 !important; /* Slightly Darker Teal */
-  border-color: #018786 !important;
-}
-
-.btn-primary:hover {
-  color: #fff !important;
-  background-color: #015f58 !important; /* Even Darker Teal on Hover */
-  border-color: #015f58 !important;
-}
-
-.btn-secondary {
-  color: #fff !important;
-  background-color: #5a6268 !important; /* Darker Gray */
-  border-color: #545b62 !important;
-}
-
-.btn-secondary:hover {
-  color: #fff !important;
-  background-color: #4e555b !important; /* Darker Gray on Hover */
-  border-color: #454d54 !important;
-}
-
-/* Removing the focus outline for a clean look */
-.btn:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 767px) {
-  .App-header {
-    min-height: auto;
-    padding: 10px;
-    font-size: calc(8px + 2vmin);
-  }
-
-  .App-logo {
-    height: 30vmin;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
+@media (max-width: 768px) {
+  .app-main {
+    padding-top: 70px;
   }
 }
