@@ -2,24 +2,34 @@ import AIS from "../../Assets/Projects/ais_utd_logo.png";
 import cometpark from "../../Assets/Projects/cometpark.png";
 import leetcode from "../../Assets/Projects/leetcode.png";
 import website from "../../Assets/Projects/website.png";
+import toyotatinder from "../../Assets/Projects/toyotatinder.svg";
 
 const projectsData = [
+  {
+    imgPath: toyotatinder,
+    title: "ToyotaTinder: AI Car Matchmaker",
+    description:
+      "HackUTD 2025 project that ingests a Toyota inventory CSV, calls Google Gemini 2.5 Flash for scoring, and serves a Framer Motion swipe deck with localStorage sync, lightweight auth, and resilient fallbacks for offline demos.",
+    ghLink: "https://github.com/kennnyq/Hackathon2025",
+    demoLink: "https://toyotatinder.us",
+    tags: ["Next.js", "Google Gemini", "Framer Motion", "Tailwind CSS"],
+  },
   {
     imgPath: AIS,
     title: "AI Music Genre Classification",
     description:
-      "Training a CNN on mel-spectrograms with TensorFlow and Librosa preprocessing, then surfacing experiments through a React + Node.js interface for uploading tracks, reviewing logits, and exporting metrics.",
+      "Built a Librosa + TensorFlow CNN with spectrogram normalization, augmentation, and TensorBoard tracking to hit 90% accuracy, then shipped a React interface calling AWS Lambda for real-time genre inference.",
     ghLink: "https://github.com/ly-sona/music-genre-classification",
-    tags: ["Python", "TensorFlow", "React", "Node.js"],
+    tags: ["Python", "TensorFlow", "Librosa", "React"],
   },
   {
     imgPath: cometpark,
     title: "CometPark",
     description:
-      "A TypeScript web application for the UT Dallas community that aggregates parking lot telemetry. I architected the React front end, Node/Express APIs, and MongoDB pipelines so students can quickly reason about capacity trends.",
-    ghLink: "https://github.com/yourusername/CometPark",
+      "Remix + TypeScript full-stack tool for UT Dallas that stores parking lot image uploads in Pinata IPFS, streams ratings with WebSockets, and optimizes MongoDB queries for 10,000+ user interactions.",
+    ghLink: "https://github.com/bornayo7/CometPark",
     demoLink: "https://cometpark.org",
-    tags: ["TypeScript", "React", "Node.js", "MongoDB"],
+    tags: ["Remix", "TypeScript", "Pinata IPFS", "MongoDB"],
   },
   {
     imgPath: leetcode,

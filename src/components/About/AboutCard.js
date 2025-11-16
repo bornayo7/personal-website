@@ -9,16 +9,19 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p>
             Hi everyone, I'm <span className="imp-text-color">Yash Baruah</span> from
-            <span className="imp-text-color"> Southlake, Texas</span>. I'm studying Computer Science at
-            the University of Texas at Dallas where I focus on Artificial Intelligence and Machine
-            Learning. Course projects and research sprints give me plenty of excuses to explore data
-            structures, algorithms, systems, and model evaluation.
+            <span className="imp-text-color"> Southlake, Texas</span>. At UT Dallas I'm the student who
+            drags a laptop to every coffee shop so I can sketch prototypes between classes. I love
+            blending <strong>Java</strong>, <strong>Python</strong>, <strong>TensorFlow</strong>,
+            <strong>Next.js</strong>, and <strong>Remix</strong> because it lets a sticky note idea
+            become a working demo. HackUTD's ToyotaTinder, a DIY music genre classifier, and CometPark
+            taught me how to gather messy datasets, tune models quickly, and polish front-ends people
+            actually want to click.
           </p>
           <p>
-            I'm most energized when I get to blend <strong>Python</strong>, <strong>TensorFlow</strong>,
-            and <strong>React</strong> to move an idea from dataset to prototype. That means collecting
-            data, training models, monitoring experiments, and crafting the full-stack interfaces that
-            make those results collaborative.
+            Outside of code I'm an Assistant Manager at Kumon, helping students stay curious while I
+            keep learning how to explain tough topics clearly. Weekends usually involve road trips,
+            gaming nights, or planning the next build with friends, which keeps me grounded when I'm
+            chasing down bugs.
           </p>
           <ul className="about-activities">
             <li>
@@ -31,8 +34,6 @@ function AboutCard() {
               <ImPointRight /> Exploring emerging technologies
             </li>
           </ul>
-          <p className="quote">"Strive to build things that make a difference"</p>
-          <footer className="blockquote-footer">Yash Baruah</footer>
         </blockquote>
       </Card.Body>
     </Card>

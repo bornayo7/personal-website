@@ -12,8 +12,8 @@ function Projects() {
           Model work & <span className="imp-text-color">systems</span>
         </h1>
         <p className="section-description">
-          A focused set of ML experiments, data-driven builds, and supporting tools I created while
-          studying Computer Science at UT Dallas.
+          From ToyotaTinder's swipeable car recommendations to AI music genre classification and
+          CometPark's analytics dashboard, these are the projects backing my latest resume.
         </p>
         <Row className="g-4">
           {projectsData.map((project) => (

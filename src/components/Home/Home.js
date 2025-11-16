@@ -10,9 +10,10 @@ import Techstack from "../About/Techstack";
 import Toolstack from "../About/Toolstack";
 
 const quickFacts = [
+  { title: "Status", value: "UT Dallas CS '26 Student" },
+  { title: "Recent Role", value: "Summer ASE Intern · Mashfrog" },
   { title: "Location", value: "Southlake, TX" },
-  { title: "Focus", value: "AI / ML / Full-stack" },
-  { title: "Education", value: "UT Dallas CS" },
+  { title: "Focus", value: "AI automation & full-stack" },
 ];
 
 const featuredProjects = projectsData.slice(0, 2);
@@ -24,7 +25,7 @@ function Home() {
         <Container>
           <Row className="align-items-center g-5">
             <Col lg={7} className="hero-text">
-              <p className="eyebrow">Computer Science Student · UT Dallas</p>
+              <p className="eyebrow">UT Dallas CS '26 · AI automation builder</p>
               <h1 className="hero-title">
                 Hi, I'm <span className="imp-text-color">Yash Baruah</span>
               </h1>
@@ -32,9 +33,12 @@ function Home() {
                 <Type />
               </div>
               <p className="hero-copy">
-                I'm a Computer Science student concentrating on Artificial Intelligence and Machine
-                Learning. I spend most of my time training models, experimenting with data pipelines,
-                and building the full-stack tooling that helps me evaluate those experiments.
+                I'm a UT Dallas Computer Science student focused on AI-first automation builds and
+                full-stack prototypes that apply ML in practical ways. I recently wrapped up a summer
+                Assistant Software Engineer internship at Mashfrog where I designed Infor RPA bots,
+                Angular H5 components, and ION integrations that automate enterprise workflows. When
+                I'm away from internships, I build projects like ToyotaTinder and music genre
+                classifiers to keep sharpening my ML, data, and front-end instincts.
               </p>
               <div className="cta-group">
                 <Button as={Link} to="/resume" variant="primary" className="cta-btn">
@@ -61,8 +65,8 @@ function Home() {
               <div className="hero-visual card-surface">
                 <img src={homeLogo} alt="Working on a laptop" className="img-fluid" />
                 <div className="hero-visual-note">
-                  <p>Focusing on ML coursework, CNN research sprints, and campus data projects.</p>
-                  <p>Also building React/Node apps so I can deploy my experiments end-to-end.</p>
+                  <p>I paired Infor OS, Gen AI, and server-side filtering during my Mashfrog internship to keep ERP bots reliable.</p>
+                  <p>Also prototyping car matchmakers, CNNs, and campus tools with Next.js, Remix, and AWS.</p>
                 </div>
               </div>
             </Col>
@@ -74,8 +78,9 @@ function Home() {
           <p className="section-eyebrow">Featured Projects</p>
           <h2 className="section-heading">AI, data, and full-stack builds</h2>
           <p className="section-description">
-            A quick look at the projects I'm actively iterating on—each combines ML experimentation
-            with practical engineering so I can share results with classmates and mentors.
+            ToyotaTinder, AI Music Genre Classifier, and CometPark are where I test-drive new stacks,
+            tighten Framer Motion or TensorFlow workflows, and prove that prototypes can make it into
+            production demos.
           </p>
           <Row className="g-4">
             {featuredProjects.map((project) => (
@@ -96,22 +101,21 @@ function Home() {
           <p className="section-eyebrow">Skills & Tools</p>
           <h2 className="section-heading">Stacks supporting my ML work</h2>
           <p className="section-description">
-            Comfort in both model training (Python, TensorFlow, PyTorch) and the full-stack delivery
-            layer (React, Node.js, databases) lets me push experiments from notebooks into products
-            others can use.
+            Blending Java/Python/C++ fundamentals with frameworks like Next.js, Angular, Remix, and
+            TensorFlow lets me deliver everything from RPA bots to AWS-hosted inference dashboards.
           </p>
           <Row className="g-4">
             <Col md={6}>
               <div className="skill-panel card-surface">
-                <h3>Professional Skillset</h3>
-                <p>Languages and frameworks I reach for when building ML prototypes.</p>
+                <h3>Languages & Frameworks</h3>
+                <p>Stacks used across Mashfrog, HackUTD, and my coursework.</p>
                 <Techstack />
               </div>
             </Col>
             <Col md={6}>
               <div className="skill-panel card-surface">
-                <h3>Tools I use</h3>
-                <p>Platforms that keep experiment tracking and iteration fast.</p>
+                <h3>Cloud, Platforms & Ops</h3>
+                <p>Infra used for deployments, automation, and collaboration.</p>
                 <Toolstack />
               </div>
             </Col>

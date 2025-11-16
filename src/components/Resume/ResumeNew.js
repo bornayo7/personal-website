@@ -7,12 +7,6 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const resumeHighlights = [
-  "B.S. Computer Science at UT Dallas with an AI/ML specialization",
-  "Professional experience building React + Node.js applications",
-  "Machine learning research focused on computer vision and automation",
-];
-
 const getViewportWidth = () =>
   typeof window === "undefined" ? 1200 : window.innerWidth;
 
@@ -37,14 +31,8 @@ function ResumeNew() {
               A closer <span className="imp-text-color">look</span>
             </h1>
             <p className="section-description">
-              Download my latest resume for a deeper dive into my coursework, experience, and
-              leadership across UT Dallas initiatives.
+              Download my resume to see my latest experience, projects, and the impact I&apos;m delivering today.
             </p>
-            <ul className="resume-highlight-list">
-              {resumeHighlights.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
           </Col>
           <Col lg={5} className="text-lg-end">
             <Button href={pdf} target="_blank" variant="primary" className="cta-btn">

@@ -12,18 +12,19 @@ function About() {
           <Col lg={6} className="about-page-text">
             <p className="section-eyebrow">About</p>
             <h1 className="section-heading">
-              Know who <span className="imp-text-color">I'm</span>
+              Get to <span className="imp-text-color">Know Me</span>
             </h1>
             <p className="section-description">
-              I'm pursuing a B.S. in Computer Science at the University of Texas at Dallas with a
-              concentration in Artificial Intelligence and Machine Learning. My coursework and
-              personal research revolve around building models, curating datasets, running
-              experiments, and packaging those learnings inside approachable tools.
+              I'm pursuing a B.S. in Computer Science at the University of Texas at Dallas (Dec. 2026)
+              and split my time between AI/ML electives, systems programming labs, and club projects.
+              Those classes keep my fundamentals sharp while I experiment with ways to make automation
+              feel less like a buzzword and more like a teammate.
             </p>
             <p className="section-description">
-              Outside of lectures you'll find me collaborating with AI/ML clubs, refining my own data
-              projects, and teaching peers how to reason about metrics, infrastructure, and shipping
-              prototypes responsibly.
+              This past summer I interned as an Assistant Software Engineer at Mashfrog, turning Infor
+              OS ideas into RPA bots, Angular H5 components, and ION data flows for ERP teams. Back on
+              campus I'm iterating on ToyotaTinder, an AI music genre classifier, and CometPark so I
+              can keep stretching my ML, design, and product instincts between internships.
             </p>
           </Col>
           <Col lg={6}>

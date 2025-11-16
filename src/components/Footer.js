@@ -1,8 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -14,7 +15,7 @@ function Footer() {
           <Col md={4}>
             <div className="footer-branding">
               <p className="footer-title">Yash Baruah</p>
-              <p className="footer-copy">CS student focused on AI/ML modeling, data work, and full-stack support.</p>
+              <p className="footer-copy">UT Dallas CS '26 · Former Mashfrog ASE Intern</p>
             </div>
           </Col>
           <Col md={4} className="text-md-center">
@@ -43,13 +44,8 @@ function Footer() {
               >
                 <FaLinkedinIn />
               </a>
-              <a
-                href="https://www.instagram.com/yash.baruah"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <AiFillInstagram />
+              <a href="mailto:yashbaruah@hotmail.com" aria-label="Email">
+                <FiMail />
               </a>
             </div>
           </Col>
