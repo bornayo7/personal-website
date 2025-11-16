@@ -2,13 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../Assets/logo.png";
-import {
-  AiFillGithub,
-  AiOutlineHome,
-  AiOutlineUser,
-  AiOutlineProject,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { AiFillGithub, AiOutlineHome, AiOutlineUser, AiOutlineProject } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { FiSun, FiMoon } from "react-icons/fi";
 
@@ -67,9 +61,6 @@ function NavBar({ theme = "light", onToggleTheme = () => {} }) {
               className={`resume-link ${isActive("/resume") ? "active" : ""}`}
             >
               <CgFileDocument /> Resume
-            </Nav.Link>
-            <Nav.Link href="mailto:yashbaruah@hotmail.com" rel="noopener noreferrer">
-              <AiOutlineMail /> Contact
             </Nav.Link>
             <Nav.Link
               href="https://github.com/bornayo7"

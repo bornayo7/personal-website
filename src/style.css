@@ -276,6 +276,8 @@ section.project-section {
   font-size: clamp(2.8rem, 6vw, 4.4rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: var(--hero-title-color);
+  transition: color 0.3s ease;
 }
 
 .eyebrow {
@@ -410,6 +412,8 @@ section.project-section {
   height: 100%;
   background: var(--surface-strong);
   color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card-view:hover {
@@ -450,11 +454,18 @@ section.project-section {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .project-card-view .card-title {
   color: var(--text-primary);
+}
+
+.project-card-view .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-card-view .card-text {

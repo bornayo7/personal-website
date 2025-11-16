@@ -12,6 +12,7 @@
   --secondary-soft: rgba(249, 115, 22, 0.18);
   --text-primary: #0f172a;
   --text-secondary: #475569;
+  --hero-title-color: var(--text-primary);
   --surface-glow: radial-gradient(circle at 18% 20%, rgba(37, 99, 235, 0.08), transparent 55%),
     radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.08), transparent 60%);
   --hero-glow-1: rgba(37, 99, 235, 0.14);
@@ -38,6 +39,7 @@
   --secondary-soft: rgba(255, 182, 133, 0.24);
   --text-primary: #f8fbff;
   --text-secondary: rgba(219, 229, 255, 0.82);
+  --hero-title-color: #fff6ed;
   --surface-glow: radial-gradient(circle at 18% 20%, rgba(93, 228, 199, 0.14), transparent 55%),
     radial-gradient(circle at 80% 0%, rgba(255, 182, 133, 0.18), transparent 60%);
   --hero-glow-1: rgba(93, 228, 199, 0.18);
