@@ -13,7 +13,7 @@ const quickFacts = [
   { title: "Status", value: "UT Dallas CS '26 Student" },
   { title: "Recent Role", value: "Summer ASE Intern · Mashfrog" },
   { title: "Location", value: "Southlake, TX" },
-  { title: "Focus", value: "AI automation & full-stack" },
+  { title: "Focus", value: "AI/ML & full-stack" },
 ];
 
 const featuredProjects = projectsData.slice(0, 2);
@@ -25,7 +25,7 @@ function Home() {
         <Container>
           <Row className="align-items-center g-5">
             <Col lg={7} className="hero-text">
-              <p className="eyebrow">UT Dallas CS '26 · AI automation builder</p>
+              <p className="eyebrow">UT Dallas CS '26 · AI/ML builder</p>
               <h1 className="hero-title">
                 Hi, I'm <span className="imp-text-color">Yash Baruah</span>
               </h1>
@@ -38,7 +38,7 @@ function Home() {
                 Assistant Software Engineer internship at Mashfrog where I designed Infor RPA bots,
                 Angular H5 components, and ION integrations that automate enterprise workflows. When
                 I'm away from internships, I build projects like ToyotaTinder and music genre
-                classifiers to keep sharpening my ML, data, and front-end instincts.
+                classifiers to keep sharpening my ML, data, and front-end skills.
               </p>
               <div className="cta-group">
                 <Button as={Link} to="/resume" variant="primary" className="cta-btn">
@@ -65,8 +65,12 @@ function Home() {
               <div className="hero-visual card-surface">
                 <img src={homeLogo} alt="Working on a laptop" className="img-fluid" />
                 <div className="hero-visual-note">
-                  <p>I paired Infor OS, Gen AI, and server-side filtering during my Mashfrog internship to keep ERP bots reliable.</p>
-                  <p>Also prototyping car matchmakers, CNNs, and campus tools with Next.js, Remix, and AWS.</p>
+                  <p>Some of my current goals:</p>
+                  <ul>
+                    <li>Deepen my foundations in algorithms, data structures, and math for machine learning.</li>
+                    <li>Build and deploy end-to-end AI and ML projects that solve real problems, not just class assignments.</li>
+                    <li>Develop strong software engineering habits such as version control, testing, and clean code for ML systems.</li>
+                  </ul>
                 </div>
               </div>
             </Col>
