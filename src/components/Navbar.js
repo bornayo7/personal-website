@@ -33,8 +33,8 @@ function NavBar({ theme = "light", onToggleTheme = () => {} }) {
       fixed="top"
       expanded={isExpanded}
       className={navColour ? "sticky navbar" : "navbar"}
-      bg="dark"
-      variant="dark"
+      bg={theme === "dark" ? "dark" : "light"}
+      variant={theme === "dark" ? "dark" : "light"}
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
