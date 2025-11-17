@@ -4,11 +4,19 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
-function ProjectCards({ imgPath, title, description, ghLink, demoLink, tags = [] }) {
+function ProjectCards({
+  imgPath,
+  title,
+  description,
+  ghLink,
+  demoLink,
+  tags = [],
+  imageClassName = "",
+}) {
   return (
     <Card className="project-card-view card-surface">
       <div className="project-image-wrapper">
-        <Card.Img variant="top" src={imgPath} alt={title} />
+        <Card.Img variant="top" src={imgPath} alt={title} className={imageClassName} />
       </div>
       <Card.Body>
         <div className="project-card-heading">

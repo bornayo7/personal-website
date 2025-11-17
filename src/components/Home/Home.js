@@ -26,9 +26,7 @@ function Home() {
           <Row className="align-items-center g-5">
             <Col lg={7} className="hero-text">
               <p className="eyebrow">UT Dallas CS '26 · AI/ML builder</p>
-              <h1 className="hero-title">
-                Hi, I'm <span className="imp-text-color">Yash Baruah</span>
-              </h1>
+              <h1 className="hero-title">Hi, I'm Yash Baruah</h1>
               <div className="typewriter-wrap">
                 <Type />
               </div>

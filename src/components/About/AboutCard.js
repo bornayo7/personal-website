@@ -4,24 +4,21 @@ import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
-    <Card className="quote-card-view card-surface">
+    <Card className="quote-card-view card-surface about-card">
       <Card.Body>
-        <blockquote className="blockquote mb-0">
+        <blockquote className="blockquote mb-0 about-card-text">
           <p>
-            Hi everyone, I'm <span className="imp-text-color">Yash Baruah</span> from
-            <span className="imp-text-color"> Southlake, Texas</span>. At UT Dallas I'm the student who
-            drags a laptop to every coffee shop so I can sketch prototypes between classes. I love
-            blending <strong>Java</strong>, <strong>Python</strong>, <strong>TensorFlow</strong>,
-            <strong>Next.js</strong>, and <strong>Remix</strong> because it lets a sticky note idea
-            become a working demo. HackUTD's ToyotaTinder, a DIY music genre classifier, and CometPark
-            taught me how to gather messy datasets, tune models quickly, and polish front-ends people
-            actually want to click.
+            I've been hooked on technology
+            since I was the kid taking gadgets apart, and UT Dallas keeps that curiosity moving
+            forward every day. I love collaborating with my peers to create projects like
+            ToyotaTinder, CometPark, and the music genre classifier, which have taught me many skills such as how to gather
+            messy datasets, tune models, and ship front-ends that help bring these projects to life.
+            
           </p>
           <p>
-            Outside of code I'm an Assistant Manager at Kumon, helping students stay curious while I
-            keep learning how to explain tough topics clearly. Weekends usually involve road trips,
-            gaming nights, or planning the next build with friends, which keeps me grounded when I'm
-            chasing down bugs.
+            Outside of coding experience, I have also been an Assistant Manager at Kumon, helping students stay curious while I
+            keep learning how to explain tough topics clearly. My weekends usually involve road trips,
+            gaming nights, or planning the my next projects with friends.
           </p>
           <ul className="about-activities">
             <li>

@@ -28,7 +28,7 @@
 }
 
 [data-theme="dark"] {
-  --background: #05070f;
+  --background: #2d313c;
   --surface: #0c1221;
   --surface-strong: #161b2f;
   --surface-overlay: rgba(11, 17, 30, 0.92);
@@ -61,7 +61,7 @@
 body {
   margin: 0;
   font-family: "Inter", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: var(--background);
+  background-color: var(--background) !important;
   background-image: var(--surface-glow);
   background-attachment: fixed;
   color: var(--text-primary);

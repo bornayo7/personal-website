@@ -2,7 +2,7 @@ import AIS from "../../Assets/Projects/ais_utd_logo.png";
 import cometpark from "../../Assets/Projects/cometpark.png";
 import leetcode from "../../Assets/Projects/leetcode.png";
 import website from "../../Assets/Projects/website.png";
-import toyotatinder from "../../Assets/Projects/toyotatinder.svg";
+import toyotatinder from "../../Assets/Projects/toyotatinder.png";
 
 const projectsData = [
   {
@@ -13,6 +13,7 @@ const projectsData = [
     ghLink: "https://github.com/kennnyq/Hackathon2025",
     demoLink: "https://toyotatinder.us",
     tags: ["Next.js", "Google Gemini", "Framer Motion", "Tailwind CSS"],
+    imageClassName: "project-image-contain",
   },
   {
     imgPath: AIS,
@@ -30,6 +31,7 @@ const projectsData = [
     ghLink: "https://github.com/bornayo7/CometPark",
     demoLink: "https://cometpark.org",
     tags: ["Remix", "TypeScript", "Pinata IPFS", "MongoDB"],
+    imageClassName: "project-image-contain",
   },
   {
     imgPath: leetcode,

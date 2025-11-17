@@ -11,20 +11,18 @@ function About() {
         <Row className="align-items-center g-5">
           <Col lg={6} className="about-page-text">
             <p className="section-eyebrow">About</p>
-            <h1 className="section-heading">
-              Get to <span className="imp-text-color">Know Me</span>
-            </h1>
+            <h1 className="section-heading">Get to Know Me</h1>
             <p className="section-description">
-              I'm pursuing a B.S. in Computer Science at the University of Texas at Dallas (Dec. 2026)
-              and split my time between AI/ML electives, systems programming labs, and club projects.
-              Those classes keep my fundamentals sharp while I experiment with ways to make automation
-              feel less like a buzzword and more like a teammate.
+              I'm working toward a B.S. in Computer Science at the University of Texas at Dallas (Dec.
+              2026) and usually split my week between AI/ML electives, systems programming labs, and
+              club projects. Those classes keep my fundamentals steady while giving me excuses to
+              tinker with new automation ideas after hours.
             </p>
             <p className="section-description">
-              This past summer I interned as an Assistant Software Engineer at Mashfrog, turning Infor
-              OS ideas into RPA bots, Angular H5 components, and ION data flows for ERP teams. Back on
+              Over the summer I interned as an Assistant Software Engineer at Mashfrog, building
+              Infor OS RPA bots, Angular H5 components, and ION data flows for ERP teams. Back on
               campus I'm iterating on ToyotaTinder, an AI music genre classifier, and CometPark so I
-              can keep stretching my ML, design, and product instincts between internships.
+              keep stretching my ML, design, and product instincts between internships.
             </p>
           </Col>
           <Col lg={6}>
