@@ -10,7 +10,7 @@ const projectsData = [
     title: "ToyotaTinder: AI Car Matchmaker",
     description:
       "HackUTD 2025 project that ingests a Toyota inventory CSV, calls Google Gemini 2.5 Flash for scoring, and serves a Framer Motion swipe deck with localStorage sync, lightweight auth, and resilient fallbacks for offline demos.",
-    ghLink: "https://github.com/kennnyq/Hackathon2025",
+    ghLink: "https://github.com/bornayo7/toyota-tinder",
     demoLink: "https://toyotatinder.us",
     tags: ["Next.js", "Google Gemini", "Framer Motion", "Tailwind CSS"],
     imageClassName: "project-image-contain",
@@ -28,7 +28,7 @@ const projectsData = [
     title: "CometPark",
     description:
       "Remix + TypeScript full-stack tool for UT Dallas that stores parking lot image uploads in Pinata IPFS, streams ratings with WebSockets, and optimizes MongoDB queries for 10,000+ user interactions.",
-    ghLink: "https://github.com/bornayo7/CometPark",
+    ghLink: "https://github.com/kennnyq/Hackathon2024",
     demoLink: "https://cometpark.org",
     tags: ["Remix", "TypeScript", "Pinata IPFS", "MongoDB"],
     imageClassName: "project-image-contain",
