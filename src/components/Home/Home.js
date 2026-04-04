@@ -11,7 +11,7 @@ import Toolstack from "../About/Toolstack";
 
 const quickFacts = [
   { title: "Status", value: "UT Dallas CS '26 Student" },
-  { title: "Recent Role", value: "Summer ASE Intern · Mashfrog" },
+  { title: "Upcoming Role", value: "AI SWE Intern - Nokia" },
   { title: "Location", value: "Southlake, TX" },
   { title: "Focus", value: "AI/ML & full-stack" },
 ];
@@ -25,18 +25,19 @@ function Home() {
         <Container>
           <Row className="align-items-center g-5">
             <Col lg={7} className="hero-text">
-              <p className="eyebrow">UT Dallas CS '26 · AI/ML builder</p>
+              <p className="eyebrow">UT Dallas CS '26 - AI/ML builder</p>
               <h1 className="hero-title">Hi, I'm Yash Baruah</h1>
               <div className="typewriter-wrap">
                 <Type />
               </div>
               <p className="hero-copy">
                 I'm a UT Dallas Computer Science student focused on AI-first automation builds and
-                full-stack prototypes that apply ML in practical ways. I recently wrapped up a summer
-                Assistant Software Engineer internship at Mashfrog where I designed Infor RPA bots,
-                Angular H5 components, and ION integrations that automate enterprise workflows. When
-                I'm away from internships, I build projects like ToyotaTinder and music genre
-                classifiers to keep sharpening my ML, data, and front-end skills.
+                full-stack prototypes that apply ML in practical ways. This upcoming summer, I'll be
+                joining Nokia as an AI SWE Intern, where I'll be
+                researching how AI can be applied to fiber optics and exploring automation-focused
+                engineering on optics production. Outside internships, I build
+                projects like ToyotaTinder and music genre classifiers to keep sharpening my ML,
+                data, and front-end skills.
               </p>
               <div className="cta-group">
                 <Button as={Link} to="/resume" variant="primary" className="cta-btn">
@@ -65,9 +66,18 @@ function Home() {
                 <div className="hero-visual-note">
                   <p>Some of my current goals:</p>
                   <ul>
-                    <li>Deepen my foundations in algorithms, data structures, and math for machine learning.</li>
-                    <li>Build and deploy end-to-end AI and ML projects that solve real problems, not just class assignments.</li>
-                    <li>Develop strong software engineering habits such as version control, testing, and clean code for ML systems.</li>
+                    <li>
+                      Deepen my foundations in algorithms, data structures, and math for machine
+                      learning.
+                    </li>
+                    <li>
+                      Build and deploy end-to-end AI and ML projects that solve real problems, not
+                      just class assignments.
+                    </li>
+                    <li>
+                      Develop strong software engineering habits such as version control, testing,
+                      and clean code for ML systems.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -110,7 +120,7 @@ function Home() {
             <Col md={6}>
               <div className="skill-panel card-surface">
                 <h3>Languages & Frameworks</h3>
-                <p>Stacks used across Mashfrog, HackUTD, and my coursework.</p>
+                <p>Stacks used across internships, HackUTD, and my coursework.</p>
                 <Techstack />
               </div>
             </Col>

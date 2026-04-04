@@ -15,7 +15,7 @@ function Footer() {
           <Col md={4}>
             <div className="footer-branding">
               <p className="footer-title">Yash Baruah</p>
-              <p className="footer-copy">UT Dallas CS '26 · Former Mashfrog ASE Intern</p>
+              <p className="footer-copy">UT Dallas CS '26 - Incoming Nokia AI SWE Intern</p>
             </div>
           </Col>
           <Col md={4} className="text-md-center">
@@ -26,7 +26,7 @@ function Footer() {
             </div>
           </Col>
           <Col md={4} className="text-md-end">
-            <p className="footer-copy">© {year} YB · All rights reserved</p>
+            <p className="footer-copy">(c) {year} YB - All rights reserved</p>
             <div className="footer-socials">
               <a
                 href="https://github.com/bornayo7"

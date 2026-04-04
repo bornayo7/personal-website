@@ -19,10 +19,13 @@ function About() {
               tinker with new automation ideas after hours.
             </p>
             <p className="section-description">
-              Over the summer I interned as an Assistant Software Engineer at Mashfrog, building
-              Infor OS RPA bots, Angular H5 components, and ION data flows for ERP teams. Back on
-              campus I'm iterating on ToyotaTinder, an AI music genre classifier, and CometPark so I
-              keep stretching my ML, design, and product instincts between internships.
+              This upcoming summer I'll be joining Nokia as an AI SWE Intern for the AI SW Automation
+              Co-op, where I'll be researching how AI can be applied to fiber optics while building on
+              the automation and AI-focused engineering work I want to keep pursuing. My earlier
+              experience at Mashfrog gave me hands-on exposure to RPA bots, Angular H5 components, and
+              ION data flows, and back on campus I'm iterating on ToyotaTinder, an AI music genre
+              classifier, and CometPark so I keep stretching my ML, design, and product instincts
+              between internships.
             </p>
           </Col>
           <Col lg={6}>
