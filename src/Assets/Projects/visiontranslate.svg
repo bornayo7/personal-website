@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">VisionTranslate logo</title>
+  <desc id="desc">Purple VT mark with an eye lens, used for the VisionTranslate project.</desc>
+  <rect width="512" height="512" fill="transparent"/>
+  <g filter="url(#shadow)">
+    <path d="M42 132H118L78 384H8L42 132Z" fill="url(#letterGrad)" stroke="#31218C" stroke-width="5"/>
+    <path d="M142 132H218L100 384H28L142 132Z" fill="url(#letterGrad)" stroke="#31218C" stroke-width="5"/>
+    <path d="M238 154H412L392 212H326L286 384H212L252 212H218L238 154Z" fill="url(#letterGrad)" stroke="#31218C" stroke-width="5"/>
+    <path d="M318 298C356 240 430 224 494 268C450 324 374 344 318 298Z" fill="url(#eyeWhite)" stroke="#7A79D9" stroke-width="4"/>
+    <circle cx="430" cy="268" r="42" fill="url(#irisGrad)" stroke="#746655" stroke-width="4"/>
+    <circle cx="430" cy="268" r="26" fill="url(#pupilGrad)"/>
+    <ellipse cx="413" cy="246" rx="13" ry="9" fill="white"/>
+  </g>
+  <defs>
+    <linearGradient id="letterGrad" x1="40" y1="116" x2="244" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B88FF"/>
+      <stop offset="0.52" stop-color="#7773F2"/>
+      <stop offset="1" stop-color="#5D4BE0"/>
+    </linearGradient>
+    <linearGradient id="eyeWhite" x1="326" y1="254" x2="483" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFF"/>
+      <stop offset="0.55" stop-color="#D7DDFF"/>
+      <stop offset="1" stop-color="#F3F6FF"/>
+    </linearGradient>
+    <radialGradient id="irisGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(430 268) rotate(90) scale(42)">
+      <stop stop-color="#32281F"/>
+      <stop offset="0.42" stop-color="#151923"/>
+      <stop offset="0.72" stop-color="#1E2430"/>
+      <stop offset="1" stop-color="#B7A783"/>
+    </radialGradient>
+    <radialGradient id="pupilGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(431 267) rotate(90) scale(26)">
+      <stop stop-color="#05070B"/>
+      <stop offset="1" stop-color="#171B24"/>
+    </radialGradient>
+    <filter id="shadow" x="-4" y="126" width="520" height="276" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="5" stdDeviation="3" flood-color="#1A145F" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+</svg>

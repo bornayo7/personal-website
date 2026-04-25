@@ -12,8 +12,9 @@ function Projects() {
           Model work & <span className="imp-text-color">systems</span>
         </h1>
         <p className="section-description">
-          From ToyotaTinder's swipeable car recommendations to AI music genre classification and
-          CometPark's analytics dashboard, these are the projects backing my latest resume.
+          From VisionTranslate's OCR-powered image overlays to ToyotaTinder's swipeable car
+          recommendations and CometPark's analytics dashboard, these are the projects backing my
+          latest resume.
         </p>
         <Row className="g-4">
           {projectsData.map((project) => (

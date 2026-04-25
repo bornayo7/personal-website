@@ -3,8 +3,18 @@ import cometpark from "../../Assets/Projects/cometpark.png";
 import leetcode from "../../Assets/Projects/leetcode.png";
 import website from "../../Assets/Projects/website.png";
 import toyotatinder from "../../Assets/Projects/toyotatinder.png";
+import visiontranslate from "../../Assets/Projects/visiontranslate.svg";
 
 const projectsData = [
+  {
+    imgPath: visiontranslate,
+    title: "VisionTranslate",
+    description:
+      "HackSMU VII project browser extension that uses OCR engines like PaddleOCR, MangaOCR, Tesseract, and Google Vision to detect text in webpage images, then routes translations through configurable LLM or custom providers before redrawing translated text with layout-aware overlays.",
+    ghLink: "https://github.com/bornayo7/Hack-SMU-VII",
+    tags: ["Browser Extension", "OCR", "LLM Translation", "FastAPI"],
+    imageClassName: "project-image-contain",
+  },
   {
     imgPath: toyotatinder,
     title: "ToyotaTinder: AI Car Matchmaker",
