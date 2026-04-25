@@ -87,14 +87,14 @@ section.project-section {
 
 .btn-primary,
 .btn-primary:focus {
-  background: var(--primary) !important;
-  border-color: var(--primary) !important;
+  background: var(--button-primary) !important;
+  border-color: var(--button-primary) !important;
   color: #ffffff !important;
 }
 
 .btn-primary:hover {
-  background: var(--primary-strong) !important;
-  border-color: var(--primary-strong) !important;
+  background: var(--button-primary-strong) !important;
+  border-color: var(--button-primary-strong) !important;
 }
 
 .btn-outline-light,
@@ -203,7 +203,7 @@ section.project-section {
 }
 
 .navbar-nav .resume-link {
-  background: var(--primary);
+  background: var(--button-primary);
   color: #ffffff !important;
   padding: 0.45rem 1.3rem !important;
   border-radius: 999px;
@@ -215,7 +215,7 @@ section.project-section {
 }
 
 .navbar-nav .resume-link:hover {
-  background: var(--primary-strong);
+  background: var(--button-primary-strong);
 }
 
 .custom-toggler .navbar-toggler-icon {
