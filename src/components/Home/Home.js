@@ -11,7 +11,7 @@ import Toolstack from "../About/Toolstack";
 
 const quickFacts = [
   { title: "Status", value: "UT Dallas CS '26 Student" },
-  { title: "Upcoming Role", value: "AI SWE Intern - Nokia" },
+  { title: "Upcoming Role", value: "AI SW Automation Co-op" },
   { title: "Location", value: "Southlake, TX" },
   { title: "Focus", value: "AI/ML & full-stack" },
 ];
@@ -33,7 +33,7 @@ function Home() {
               <p className="hero-copy">
                 I'm a UT Dallas Computer Science student focused on AI-first automation builds and
                 full-stack prototypes that apply ML in practical ways. This upcoming summer, I'll be
-                joining Nokia as an AI SWE Intern, where I'll be
+                joining Nokia in the AI SW Automation Co-op role, where I'll be
                 researching how AI can be applied to fiber optics and exploring automation-focused
                 engineering on optics production. Outside internships, I build
                 projects like ToyotaTinder and music genre classifiers to keep sharpening my ML,

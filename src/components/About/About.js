@@ -19,8 +19,8 @@ function About() {
               tinker with new automation ideas after hours.
             </p>
             <p className="section-description">
-              This upcoming summer I'll be joining Nokia as an AI SWE Intern for the AI SW Automation
-              Co-op, where I'll be researching how AI can be applied to fiber optics while building on
+              This upcoming summer I'll be joining Nokia in the AI SW Automation Co-op role, where
+              I'll be researching how AI can be applied to fiber optics while building on
               the automation and AI-focused engineering work I want to keep pursuing. My earlier
               experience at Mashfrog gave me hands-on exposure to RPA bots, Angular H5 components, and
               ION data flows, and back on campus I'm iterating on ToyotaTinder, an AI music genre
