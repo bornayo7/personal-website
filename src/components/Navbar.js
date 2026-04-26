@@ -67,6 +67,7 @@ function NavBar({ theme = "light", onToggleTheme = () => {} }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+              className="external-link"
             >
               <AiFillGithub /> GitHub
             </Nav.Link>
