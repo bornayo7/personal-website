@@ -19,13 +19,20 @@ function About() {
               tinker with new automation ideas after hours.
             </p>
             <p className="section-description">
-              This upcoming summer I'll be joining Nokia in the AI SW Automation Co-op role, where
-              I'll be researching how AI can be applied to fiber optics while building on
-              the automation and AI-focused engineering work I want to keep pursuing. My earlier
-              experience at Mashfrog gave me hands-on exposure to RPA bots, Angular H5 components, and
-              ION data flows, and back on campus I'm iterating on ToyotaTinder, an AI music genre
-              classifier, and CometPark so I keep stretching my ML, design, and product instincts
-              between internships.
+              I'm currently an AI Software Automation Co-op at Nokia in Dallas, TX (May 2026 - Aug.
+              2026), testing and evaluating AI model use cases across intelligent product workflows
+              for Nokia's June 2026 release cycle. My work focuses on validating model behavior,
+              reliability, usability, and alignment with product requirements while collaborating
+              with R&D teams to review AI system behavior, identify model performance gaps, and
+              provide technical feedback for release-readiness decisions.
+            </p>
+            <p className="section-description">
+              I'm also researching Nokia AI model testing patterns, use case validation methods, and
+              automation strategies for intelligent product workflows. My earlier experience at
+              Mashfrog gave me hands-on exposure to RPA bots, Angular H5 components, and ION data
+              flows, and back on campus I'm iterating on ToyotaTinder, an AI music genre classifier,
+              and CometPark so I keep stretching my ML, design, and product instincts between
+              internships.
             </p>
           </Col>
           <Col lg={6}>

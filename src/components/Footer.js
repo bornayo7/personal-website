@@ -15,7 +15,7 @@ function Footer() {
           <Col md={4}>
             <div className="footer-branding">
               <p className="footer-title">Yash Baruah</p>
-              <p className="footer-copy">UT Dallas CS '26 - Incoming AI SW Automation Co-op</p>
+              <p className="footer-copy">UT Dallas CS '26 - AI Software Automation Co-op at Nokia</p>
             </div>
           </Col>
           <Col md={4} className="text-md-center">
