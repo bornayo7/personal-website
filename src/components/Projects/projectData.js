@@ -1,64 +1,65 @@
-import AIS from "../../Assets/Projects/ais_utd_logo.png";
-import cometpark from "../../Assets/Projects/cometpark.png";
-import leetcode from "../../Assets/Projects/leetcode.png";
-import website from "../../Assets/Projects/website.png";
-import toyotatinder from "../../Assets/Projects/toyotatinder.png";
 import visiontranslate from "../../Assets/Projects/visiontranslate.svg";
+import toyotatinder from "../../Assets/Projects/toyotatinder.png";
+import cometpark from "../../Assets/Projects/cometpark.png";
+import musicGenre from "../../Assets/Projects/ais_utd_logo.png";
+import leetcode from "../../Assets/Projects/leetcode.png";
+import website from "../../Assets/Projects/website.svg";
+import { REPO_URL, SITE_URL } from "../../data/links";
 
 const projectsData = [
   {
     imgPath: visiontranslate,
     title: "VisionTranslate",
     description:
-      "HackSMU VII project browser extension that uses OCR engines like PaddleOCR, MangaOCR, Tesseract, and Google Vision to detect text in webpage images, then routes translations through configurable LLM or custom providers before redrawing translated text with layout-aware overlays.",
+      "A Chrome extension that translates the text inside images, not just the page text. It detects images, canvases, and background images on any webpage, runs OCR, and redraws translated overlays in place so the layout survives, with LLM translation, caching, and read-aloud. Started at HackSMU; I'm still polishing it.",
     ghLink: "https://github.com/bornayo7/Hack-SMU-VII",
-    tags: ["Browser Extension", "OCR", "LLM Translation", "FastAPI"],
-    imageClassName: "project-image-contain",
+    tags: ["Chrome MV3", "React", "OCR", "LLMs"],
+    imageClassName: "contain",
   },
   {
     imgPath: toyotatinder,
-    title: "ToyotaTinder: AI Car Matchmaker",
+    title: "ToyotaTinder",
     description:
-      "HackUTD 2025 project that ingests a Toyota inventory CSV, calls Google Gemini 2.5 Flash for scoring, and serves a Framer Motion swipe deck with localStorage sync, lightweight auth, and resilient fallbacks for offline demos.",
+      "HackUTD 2025: a swipe-style car matchmaker that pairs real Toyota inventory data with Gemini 2.5 Flash to generate personalized recommendations. Server-side filtering and scoring plus defensive JSON parsing keep the AI picks reliable even when the model returns something malformed.",
     ghLink: "https://github.com/bornayo7/toyota-tinder",
     demoLink: "https://toyotatinder.us",
-    tags: ["Next.js", "Google Gemini", "Framer Motion", "Tailwind CSS"],
-    imageClassName: "project-image-contain",
-  },
-  {
-    imgPath: AIS,
-    title: "AI Music Genre Classification",
-    description:
-      "Built a Librosa + TensorFlow CNN with spectrogram normalization, augmentation, and TensorBoard tracking to hit 90% accuracy, then shipped a React interface calling AWS Lambda for real-time genre inference.",
-    ghLink: "https://github.com/ly-sona/music-genre-classification",
-    tags: ["Python", "TensorFlow", "Librosa", "React"],
+    tags: ["Next.js", "Google Gemini", "Node.js"],
+    imageClassName: "contain",
   },
   {
     imgPath: cometpark,
     title: "CometPark",
     description:
-      "Remix + TypeScript full-stack tool for UT Dallas that stores parking lot image uploads in Pinata IPFS, streams ratings with WebSockets, and optimizes MongoDB queries for 10,000+ user interactions.",
+      "A full-stack app from HackUTD 2024 that crowdsources UTD parking-lot ratings, with user photo uploads stored on Pinata IPFS. A real-time analytics dashboard runs on WebSockets, with MongoDB queries tuned to handle 10,000+ user interactions.",
     ghLink: "https://github.com/kennnyq/Hackathon2024",
     demoLink: "https://cometpark.org",
-    tags: ["Remix", "TypeScript", "Pinata IPFS", "MongoDB"],
-    imageClassName: "project-image-contain",
+    tags: ["Remix", "TypeScript", "MongoDB", "IPFS"],
+    imageClassName: "contain",
+  },
+  {
+    imgPath: musicGenre,
+    title: "AI Music Genre Classifier",
+    description:
+      "A CNN built with Librosa and TensorFlow that classifies songs by genre from spectrograms, hitting 90% accuracy with augmentation and TensorBoard tracking. A React front end calls AWS Lambda for real-time inference. Built with the AIS club at UTD.",
+    ghLink: "https://github.com/ly-sona/music-genre-classification",
+    tags: ["Python", "TensorFlow", "AWS Lambda", "React"],
   },
   {
     imgPath: leetcode,
-    title: "Daily LeetCode Discord Bot",
+    title: "Daily LeetCode Bot",
     description:
-      "A Node.js + Discord.js bot that assigns algorithm prompts, tracks completions, and nudges members who skip practice. The automation keeps our server accountable with scheduled jobs and a lightweight Mongo datastore.",
+      "A Discord bot that posts a daily algorithm problem, tracks who solved it, and calls out members who skip practice. Scheduled jobs and a lightweight MongoDB datastore keep our server accountable with zero upkeep.",
     ghLink: "https://github.com/bornayo7/Leetcode-Daily-Bot",
-    tags: ["Node.js", "Discord.js", "Automation"],
+    tags: ["Node.js", "Discord.js", "MongoDB"],
   },
   {
     imgPath: website,
-    title: "Personal Website",
+    title: "This Website",
     description:
-      "This React application serves as my portfolio hub with accessible theming, ML-focused copy, and GitHub Pages deployments so I can quickly update experiments, resume links, and featured work.",
-    ghLink: "https://github.com/bornayo7/personal-website",
-    demoLink: "https://bornayo7.github.io/personal-website/",
-    tags: ["React", "Design Systems", "Portfolio"],
+      "The site you're on: React with a hand-rolled design system, light and dark themes, and GitHub Pages deployment. Updating featured work or my resume is a one-commit job.",
+    ghLink: REPO_URL,
+    demoLink: SITE_URL,
+    tags: ["React", "CSS", "GitHub Pages"],
   },
 ];
 

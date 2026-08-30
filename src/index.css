@@ -1,92 +1,136 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 :root {
-  --background: #f5f7ff;
+  color-scheme: light;
+  --bg: #f3f6ff;
+  --bg-glow-1: rgba(37, 99, 235, 0.11);
+  --bg-glow-2: rgba(249, 115, 22, 0.09);
+  --bg-glow-3: rgba(14, 165, 233, 0.09);
   --surface: #ffffff;
-  --surface-strong: #eef2ff;
-  --surface-overlay: rgba(255, 255, 255, 0.92);
-  --border: rgba(15, 23, 42, 0.08);
-  --primary: #2563eb;
-  --primary-strong: #1d4ed8;
-  --button-primary: #2563eb;
-  --button-primary-strong: #1d4ed8;
-  --secondary: #f97316;
-  --secondary-soft: rgba(249, 115, 22, 0.18);
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --hero-title-color: var(--text-primary);
-  --surface-glow: radial-gradient(circle at 18% 20%, rgba(37, 99, 235, 0.08), transparent 55%),
-    radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.08), transparent 60%);
-  --hero-glow-1: rgba(37, 99, 235, 0.14);
-  --hero-glow-2: rgba(249, 115, 22, 0.16);
-  --stat-pill-bg: rgba(37, 99, 235, 0.08);
-  --stat-pill-border: rgba(37, 99, 235, 0.3);
-  --nav-bg: rgba(255, 255, 255, 0.9);
-  --nav-border: rgba(15, 23, 42, 0.08);
-  --nav-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
-  --nav-shadow-strong: 0 18px 40px rgba(15, 23, 42, 0.15);
-  --outline-border: rgba(15, 23, 42, 0.2);
-  --outline-hover: rgba(37, 99, 235, 0.08);
+  --surface-2: #edf2fd;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.17);
+  --text: #0f172a;
+  --text-2: #4b5871;
+  --text-3: #8592a8;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(37, 99, 235, 0.09);
+  --accent-border: rgba(37, 99, 235, 0.32);
+  --accent-glow: rgba(37, 99, 235, 0.24);
+  --accent-2: #d9530b;
+  --accent-2-soft: rgba(234, 88, 12, 0.1);
+  --tint-green-fg: #0d9b6c;
+  --tint-green-bg: rgba(16, 185, 129, 0.12);
+  --tint-violet-fg: #7c3aed;
+  --tint-violet-bg: rgba(139, 92, 246, 0.1);
+  --grad-accent: linear-gradient(115deg, #1d4ed8 10%, #0ea5e9 90%);
+  --nav-bg: rgba(243, 246, 255, 0.85);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(37, 99, 235, 0.07);
+  --shadow-card-hover: 0 2px 4px rgba(15, 23, 42, 0.05), 0 16px 40px rgba(37, 99, 235, 0.14);
+  --terminal-bg: #0d1526;
+  --terminal-border: rgba(125, 211, 252, 0.16);
+  --terminal-text: #cfdaee;
+  --terminal-muted: #7286a3;
+  --terminal-green: #34d399;
+  --terminal-accent: #67e8f9;
+  --terminal-glow: rgba(47, 169, 219, 0.16);
+
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
 }
 
 [data-theme="dark"] {
-  --background: #2d313c;
-  --surface: #0c1221;
-  --surface-strong: #161b2f;
-  --surface-overlay: rgba(11, 17, 30, 0.92);
-  --border: rgba(118, 144, 196, 0.32);
-  --primary: #5de4c7;
-  --primary-strong: #3ac7aa;
-  --button-primary: #327f73;
-  --button-primary-strong: #276b61;
-  --secondary: #ffb685;
-  --secondary-soft: rgba(255, 182, 133, 0.24);
-  --text-primary: #f8fbff;
-  --text-secondary: rgba(219, 229, 255, 0.82);
-  --hero-title-color: #fff6ed;
-  --surface-glow: radial-gradient(circle at 18% 20%, rgba(93, 228, 199, 0.14), transparent 55%),
-    radial-gradient(circle at 80% 0%, rgba(255, 182, 133, 0.18), transparent 60%);
-  --hero-glow-1: rgba(93, 228, 199, 0.18);
-  --hero-glow-2: rgba(255, 182, 133, 0.18);
-  --stat-pill-bg: rgba(93, 228, 199, 0.12);
-  --stat-pill-border: rgba(93, 228, 199, 0.35);
-  --nav-bg: rgba(9, 13, 23, 0.94);
-  --nav-border: rgba(118, 144, 196, 0.35);
-  --nav-shadow: 0 12px 30px rgba(5, 6, 10, 0.7);
-  --nav-shadow-strong: 0 18px 60px rgba(5, 6, 10, 0.85);
-  --outline-border: rgba(255, 255, 255, 0.35);
-  --outline-hover: rgba(255, 255, 255, 0.08);
+  color-scheme: dark;
+  --bg: #0a101f;
+  --bg-glow-1: rgba(56, 189, 248, 0.09);
+  --bg-glow-2: rgba(251, 146, 60, 0.06);
+  --bg-glow-3: rgba(52, 211, 153, 0.06);
+  --surface: #101828;
+  --surface-2: #172136;
+  --border: rgba(148, 187, 233, 0.13);
+  --border-strong: rgba(148, 187, 233, 0.22);
+  --text: #e9eefa;
+  --text-2: #a6b3cc;
+  --text-3: #77839d;
+  --accent: #38bdf8;
+  --accent-strong: #7dd3fc;
+  --accent-contrast: #041423;
+  --accent-soft: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.38);
+  --accent-glow: rgba(56, 189, 248, 0.2);
+  --accent-2: #fb923c;
+  --accent-2-soft: rgba(251, 146, 60, 0.13);
+  --tint-green-fg: #34d399;
+  --tint-green-bg: rgba(52, 211, 153, 0.13);
+  --tint-violet-fg: #a78bfa;
+  --tint-violet-bg: rgba(167, 139, 250, 0.13);
+  --grad-accent: linear-gradient(115deg, #38bdf8 10%, #34d399 90%);
+  --nav-bg: rgba(10, 16, 31, 0.82);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.28);
+  --shadow-card-hover: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 34px rgba(0, 0, 0, 0.45);
+  --terminal-bg: #0c1424;
+  --terminal-border: rgba(125, 211, 252, 0.15);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* !important: Bootstrap's stylesheet loads after this file and would
+   otherwise override the themed body colors with its own defaults. */
 body {
   margin: 0;
-  font-family: "Inter", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: var(--background) !important;
-  background-image: var(--surface-glow);
-  background-attachment: fixed;
-  color: var(--text-primary);
+  font-family: var(--font-body) !important;
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Ambient color glows behind every page (stay put while scrolling). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(640px circle at 12% -4%, var(--bg-glow-1), transparent 60%),
+    radial-gradient(720px circle at 92% 6%, var(--bg-glow-2), transparent 62%),
+    radial-gradient(780px circle at 45% 108%, var(--bg-glow-3), transparent 68%);
+  transition: background 0.25s ease;
 }
 
 #root {
   min-height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
 a {
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: none;
 }
 
 a:hover,
-a:focus,
-a:active {
-  color: var(--primary-strong);
-  text-decoration: none;
+a:focus {
+  color: var(--accent-strong);
 }
 
 img {
@@ -95,23 +139,23 @@ img {
 }
 
 ::selection {
-  background: var(--primary);
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--accent-contrast);
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.04);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: var(--border-strong);
   border-radius: 12px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-strong);
+  background: var(--text-3);
 }

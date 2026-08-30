@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Preloader from "./components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -10,25 +9,27 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import "./App.css";
+
+const getInitialTheme = () => {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+  try {
+    const stored = localStorage.getItem("preferred-theme");
+    if (stored === "light" || stored === "dark") {
+      return stored;
+    }
+  } catch {
+    /* ignore read errors */
+  }
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  return "light";
+};
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") {
-      return "light";
-    }
-    try {
-      return localStorage.getItem("preferred-theme") || "light";
-    } catch {
-      return "light";
-    }
-  });
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1200);
-    return () => clearTimeout(timer);
-  }, []);
+  const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -45,8 +46,7 @@ function App() {
 
   return (
     <Router>
-      <Preloader load={isLoading} />
-      <div className="App" id={isLoading ? "no-scroll" : "scroll"}>
+      <div className="App">
         <Navbar theme={theme} onToggleTheme={toggleTheme} />
         <ScrollToTop />
         <main className="app-main">

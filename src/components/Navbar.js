@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../Assets/logo.png";
-import { AiFillGithub, AiOutlineHome, AiOutlineUser, AiOutlineProject } from "react-icons/ai";
-import { CgFileDocument } from "react-icons/cg";
+import { AiFillGithub } from "react-icons/ai";
 import { FiSun, FiMoon } from "react-icons/fi";
+import logo from "../Assets/logo.png";
+import { GITHUB_URL } from "../data/links";
 
 function NavBar({ theme = "light", onToggleTheme = () => {} }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [navColour, setNavColour] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setNavColour(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -26,13 +26,11 @@ function NavBar({ theme = "light", onToggleTheme = () => {} }) {
       expand="md"
       fixed="top"
       expanded={isExpanded}
-      className={navColour ? "sticky navbar" : "navbar"}
-      bg={theme === "dark" ? "dark" : "light"}
-      variant={theme === "dark" ? "dark" : "light"}
+      className={scrolled ? "navbar scrolled" : "navbar"}
     >
       <Container>
-        <Navbar.Brand as={Link} to="/">
-          <img src={logo} alt="Yash Baruah logo" className="img-fluid logo" />
+        <Navbar.Brand as={Link} to="/" className="brand" onClick={closeMenu}>
+          <img src={logo} alt="Yash Baruah" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -41,35 +39,27 @@ function NavBar({ theme = "light", onToggleTheme = () => {} }) {
         >
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
-        <Navbar.Collapse
-          id="responsive-navbar-nav"
-          className="justify-content-end align-items-md-center gap-md-3"
-        >
-          <Nav className="align-items-md-center" onClick={closeMenu}>
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+          <Nav onClick={closeMenu}>
             <Nav.Link as={Link} to="/" className={isActive("/") ? "active" : ""}>
-              <AiOutlineHome /> Home
+              Home
             </Nav.Link>
             <Nav.Link as={Link} to="/about" className={isActive("/about") ? "active" : ""}>
-              <AiOutlineUser /> About
+              About
             </Nav.Link>
             <Nav.Link as={Link} to="/project" className={isActive("/project") ? "active" : ""}>
-              <AiOutlineProject /> Projects
+              Projects
+            </Nav.Link>
+            <Nav.Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+              <AiFillGithub style={{ marginRight: 6, marginBottom: 2 }} />
+              GitHub
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/resume"
               className={`resume-link ${isActive("/resume") ? "active" : ""}`}
             >
-              <CgFileDocument /> Resume
-            </Nav.Link>
-            <Nav.Link
-              href="https://github.com/bornayo7"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="external-link"
-            >
-              <AiFillGithub /> GitHub
+              Resume
             </Nav.Link>
           </Nav>
           <button
@@ -80,7 +70,6 @@ function NavBar({ theme = "light", onToggleTheme = () => {} }) {
             aria-pressed={theme === "dark"}
           >
             {theme === "dark" ? <FiSun /> : <FiMoon />}
-            <span>{theme === "dark" ? "Light" : "Dark"} mode</span>
           </button>
         </Navbar.Collapse>
       </Container>

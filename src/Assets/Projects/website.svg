@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#12141b"/>
+  <rect x="0" y="0" width="800" height="52" fill="#171a23"/>
+  <circle cx="28" cy="26" r="7" fill="#ff5f57"/>
+  <circle cx="52" cy="26" r="7" fill="#febc2e"/>
+  <circle cx="76" cy="26" r="7" fill="#28c840"/>
+  <rect x="300" y="13" width="200" height="26" rx="13" fill="#0c0e13"/>
+  <text x="400" y="31" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#767d8f">yashbaruah.com</text>
+  <text x="400" y="225" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="52" font-weight="700" fill="#e9ebf2">Yash Baruah<tspan fill="#8b93ff">.</tspan></text>
+  <text x="400" y="272" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="17" fill="#767d8f">react · design system · light/dark</text>
+  <rect x="330" y="310" width="140" height="4" rx="2" fill="#4f46e5"/>
+</svg>

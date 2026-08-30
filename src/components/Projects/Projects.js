@@ -1,29 +1,23 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import projectsData from "./projectData";
 
 function Projects() {
   return (
-    <section className="project-section" id="projects">
-      <Container>
-        <p className="section-eyebrow">Projects</p>
-        <h1 className="section-heading">
-          Model work & <span className="imp-text-color">systems</span>
-        </h1>
-        <p className="section-description">
-          From VisionTranslate's OCR-powered image overlays to ToyotaTinder's swipeable car
-          recommendations and CometPark's analytics dashboard, these are the projects backing my
-          latest resume.
+    <section className="section" id="projects">
+      <div className="wrap">
+        <p className="section-label">Projects</p>
+        <h1 className="section-title">Things I've built</h1>
+        <p className="section-intro">
+          Hackathon builds, club projects, and tools I made because I wanted them to exist. Most
+          have a repo you can poke through, and a few are still live.
         </p>
-        <Row className="g-4">
+        <div className="project-grid">
           {projectsData.map((project) => (
-            <Col md={6} lg={6} key={project.title}>
-              <ProjectCard {...project} />
-            </Col>
+            <ProjectCard key={project.title} {...project} />
           ))}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </section>
   );
 }

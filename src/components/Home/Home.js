@@ -1,138 +1,128 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FiDownloadCloud, FiMail } from "react-icons/fi";
-import homeLogo from "../../Assets/laptop.png";
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FiMail, FiArrowRight } from "react-icons/fi";
 import Type from "./Type";
+import Terminal from "./Terminal";
+import Experience from "../Experience";
+import Skills from "../Skills";
 import ProjectCard from "../Projects/ProjectCards";
 import projectsData from "../Projects/projectData";
-import Techstack from "../About/Techstack";
-import Toolstack from "../About/Toolstack";
+import SocialLinks from "../SocialLinks";
+import { GITHUB_URL, LINKEDIN_URL, EMAIL, EMAIL_URL } from "../../data/links";
 
-const quickFacts = [
-  { title: "Status", value: "UT Dallas CS '26 Student" },
-  { title: "Current Role", value: "AI Software Automation Co-op" },
-  { title: "Location", value: "Southlake, TX" },
-  { title: "Focus", value: "AI/ML & full-stack" },
-];
-
-const featuredProjects = projectsData.slice(0, 2);
+const featuredProjects = projectsData.slice(0, 3);
 
 function Home() {
   return (
     <>
-      <section className="hero-section" id="home">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={7} className="hero-text">
-              <p className="eyebrow">UT Dallas CS '26 - AI/ML builder</p>
-              <h1 className="hero-title">Hi, I'm Yash Baruah</h1>
-              <div className="typewriter-wrap">
-                <Type />
-              </div>
-              <p className="hero-copy">
-                I'm a UT Dallas Computer Science student focused on AI-first automation builds and
-                full-stack prototypes that apply ML in practical ways. I'm currently an AI Software
-                Automation Co-op at Nokia in Dallas, testing AI model use cases across intelligent
-                product workflows, validating model behavior for release readiness, and researching
-                automation strategies for AI-enabled systems. Outside internships, I build
-                projects like ToyotaTinder and music genre classifiers to keep sharpening my ML,
-                data, and front-end skills.
-              </p>
-              <div className="cta-group">
-                <Button as={Link} to="/resume" variant="primary" className="cta-btn">
-                  <FiDownloadCloud /> Resume
-                </Button>
-                <Button
-                  variant="outline-light"
-                  href="mailto:yashbaruah@hotmail.com"
-                  className="cta-btn"
-                >
-                  <FiMail /> Let's talk
-                </Button>
-              </div>
-              <div className="hero-stats">
-                {quickFacts.map((fact) => (
-                  <div key={fact.title} className="stat-pill">
-                    <p className="stat-label">{fact.title}</p>
-                    <p className="stat-value">{fact.value}</p>
-                  </div>
-                ))}
-              </div>
-            </Col>
-            <Col lg={5}>
-              <div className="hero-visual card-surface">
-                <img src={homeLogo} alt="Working on a laptop" className="img-fluid" />
-                <div className="hero-visual-note">
-                  <p>Some of my current goals:</p>
-                  <ul>
-                    <li>
-                      Deepen my foundations in algorithms, data structures, and math for machine
-                      learning.
-                    </li>
-                    <li>
-                      Build and deploy end-to-end AI and ML projects that solve real problems, not
-                      just class assignments.
-                    </li>
-                    <li>
-                      Develop strong software engineering habits such as version control, testing,
-                      and clean code for ML systems.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section className="featured-section" id="featured-projects">
-        <Container>
-          <p className="section-eyebrow">Featured Projects</p>
-          <h2 className="section-heading">AI, data, and full-stack builds</h2>
-          <p className="section-description">
-            ToyotaTinder, AI Music Genre Classifier, and CometPark are where I test-drive new stacks,
-            tighten Framer Motion or TensorFlow workflows, and prove that prototypes can make it into
-            production demos.
-          </p>
-          <Row className="g-4">
-            {featuredProjects.map((project) => (
-              <Col md={6} key={project.title}>
-                <ProjectCard {...project} />
-              </Col>
-            ))}
-          </Row>
-          <div className="cta-group mt-4">
-            <Button as={Link} to="/project" variant="outline-light" className="cta-btn">
-              Explore all projects
-            </Button>
+      <section className="hero">
+        <div className="wrap hero-grid">
+          <div className="hero-text">
+            <p className="hero-eyebrow">Dallas–Fort Worth, TX · CS @ UT Dallas</p>
+            <h1 className="hero-title">
+              Hi, I'm <span className="gradient-text">Yash</span>.
+            </h1>
+            <div className="typewriter-wrap">
+              <Type />
+            </div>
+            <p className="hero-copy">
+              I'm a computer science senior at UT Dallas, graduating this December. This past
+              summer I was at Nokia stress-testing the LLM assistant built into their optical
+              network platform; the summer before, I automated business processes as a software
+              engineering intern at Mashfrog. In between, I build things like a Chrome extension
+              that translates the text inside images on any webpage.
+            </p>
+            <div className="cta-group">
+              <Link to="/resume" className="btn-solid">
+                View my resume
+              </Link>
+              <SocialLinks />
+            </div>
+            <div className="hero-facts">
+              <span className="fact-chip">prev: Nokia · Mashfrog</span>
+              <span className="fact-chip">AWS Certified Cloud Practitioner</span>
+              <span className="fact-chip">HackUTD × HackSMU builder</span>
+            </div>
           </div>
-        </Container>
+          <Terminal />
+        </div>
       </section>
-      <section className="skills-section" id="skills">
-        <Container>
-          <p className="section-eyebrow">Skills & Tools</p>
-          <h2 className="section-heading">Stacks supporting my ML work</h2>
-          <p className="section-description">
-            Blending Java/Python/C++ fundamentals with frameworks like Next.js, Angular, Remix, and
-            TensorFlow lets me deliver everything from RPA bots to AWS-hosted inference dashboards.
+
+      <section className="section" id="experience">
+        <div className="wrap">
+          <p className="section-label">01 · Experience</p>
+          <h2 className="section-title">Where I've worked</h2>
+          <p className="section-intro">
+            Two summers of internships so far: one testing AI systems the careful way, one
+            building automation that people actually use every day.
           </p>
-          <Row className="g-4">
-            <Col md={6}>
-              <div className="skill-panel card-surface">
-                <h3>Languages & Frameworks</h3>
-                <p>Stacks used across internships, HackUTD, and my coursework.</p>
-                <Techstack />
-              </div>
-            </Col>
-            <Col md={6}>
-              <div className="skill-panel card-surface">
-                <h3>Cloud, Platforms & Ops</h3>
-                <p>Infra used for deployments, automation, and collaboration.</p>
-                <Toolstack />
-              </div>
-            </Col>
-          </Row>
-        </Container>
+          <Experience />
+        </div>
+      </section>
+
+      <section className="section" id="featured-projects">
+        <div className="wrap">
+          <p className="section-label">02 · Projects</p>
+          <h2 className="section-title">Things I've built</h2>
+          <p className="section-intro">
+            Mostly hackathon projects that outlived the hackathon. These are the three I'd show
+            you first.
+          </p>
+          <div className="project-grid">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
+          <div className="section-footer-cta">
+            <Link to="/project" className="btn-ghost">
+              See all projects <FiArrowRight />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="skills">
+        <div className="wrap">
+          <p className="section-label">03 · Skills</p>
+          <h2 className="section-title">What I work with</h2>
+          <p className="section-intro">
+            Most of this comes from coursework, internships, and too many late-night builds.
+            Heaviest on Python, TypeScript, and the AI tooling around LLMs.
+          </p>
+          <Skills />
+        </div>
+      </section>
+
+      <section className="section" id="contact">
+        <div className="wrap">
+          <div className="contact-panel">
+            <p className="section-label">04 · Contact</p>
+            <h2 className="section-title">Say hi</h2>
+            <p>
+              I graduate in December 2026 and I'm always up for talking about AI evaluation,
+              hackathons, or whatever you're building. If you're hiring, or just want to trade
+              project ideas, my inbox is open.
+            </p>
+            <div className="cta-group">
+              <a href={EMAIL_URL} className="btn-solid">
+                <FiMail /> {EMAIL}
+              </a>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                <FaLinkedinIn /> LinkedIn
+              </a>
+              <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                <AiFillGithub /> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
