@@ -1,6 +1,7 @@
 import mangatranslate from "../../Assets/Projects/mangatranslate.svg";
 import srsapp from "../../Assets/Projects/srsapp.svg";
 import skillmatch from "../../Assets/Projects/skillmatch.svg";
+import dealershipdb from "../../Assets/Projects/dealershipdb.svg";
 import toyotatinder from "../../Assets/Projects/toyotatinder.png";
 import cometpark from "../../Assets/Projects/cometpark.png";
 import musicGenre from "../../Assets/Projects/ais_utd_logo.png";
@@ -60,6 +61,14 @@ const projectsData = [
       "A CNN built with Librosa and TensorFlow that classifies songs by genre from spectrograms, hitting 90% accuracy with augmentation and TensorBoard tracking. A React front end calls AWS Lambda for real-time inference. Built with the AIS club at UTD.",
     ghLink: "https://github.com/ly-sona/music-genre-classification",
     tags: ["Python", "TensorFlow", "AWS Lambda", "React"],
+  },
+  {
+    imgPath: dealershipdb,
+    title: "Car Dealership Database",
+    description:
+      "A complete database system for a car dealership, built for my Database Systems course at UTD. I designed the schema and ER model in MySQL Workbench, then wrote a Python interface layer and a set of web forms for managing customers, vehicles, sales, service records, and appointments.",
+    ghLink: "https://github.com/bornayo7/Database-Project",
+    tags: ["MySQL", "Python", "SQL"],
   },
   {
     imgPath: leetcode,
