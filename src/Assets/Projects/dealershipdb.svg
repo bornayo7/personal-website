@@ -1,76 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="dbTitle dbDesc">
   <title id="dbTitle">Car Dealership Database</title>
-  <desc id="dbDesc">A database cylinder with a car on it, connected to entity tables for customers, vehicles, sales, and service.</desc>
+  <desc id="dbDesc">A blueprint drawing of a car above an entity-relationship schema for a dealership database.</desc>
   <defs>
-    <radialGradient id="dbGlow1" cx="0.5" cy="0.25" r="0.75">
-      <stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="dbGlow2" cx="0.15" cy="0.9" r="0.7">
-      <stop offset="0" stop-color="#f97316" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="dbBody" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#1d4ed8"/>
-      <stop offset="0.5" stop-color="#2f6ff0"/>
-      <stop offset="1" stop-color="#0ea5e9"/>
-    </linearGradient>
+    <pattern id="dbGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 L0 0 L0 24" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.07"/>
+    </pattern>
+    <pattern id="dbGridMajor" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M120 0 L0 0 L0 120" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.13"/>
+    </pattern>
   </defs>
 
-  <rect width="800" height="450" fill="#0d1526"/>
-  <rect width="800" height="450" fill="url(#dbGlow1)"/>
-  <rect width="800" height="450" fill="url(#dbGlow2)"/>
+  <!-- blueprint paper -->
+  <rect width="800" height="450" fill="#153a7e"/>
+  <rect width="800" height="450" fill="url(#dbGrid)"/>
+  <rect width="800" height="450" fill="url(#dbGridMajor)"/>
+  <rect x="14" y="14" width="772" height="422" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.65"/>
 
-  <!-- schema hint -->
-  <text x="48" y="58" font-family="Consolas, ui-monospace, monospace" font-size="15" fill="#7286a3">SELECT * FROM dealership;</text>
-
-  <!-- relation lines -->
-  <g stroke="#38bdf8" stroke-width="2" opacity="0.55" fill="none">
-    <path d="M222 172 L318 190"/>
-    <path d="M578 172 L482 190"/>
-    <path d="M252 318 L330 268"/>
-    <path d="M548 318 L470 268"/>
+  <!-- car schematic -->
+  <g stroke="#ffffff" fill="none" stroke-width="2.5">
+    <path d="M266 152 C284 126 318 108 366 104 L448 104 C492 106 520 122 538 148 L562 154 C574 157 580 164 580 173 L580 182 L220 182 L220 172 C220 163 227 156 238 154 Z"/>
+    <path d="M362 108 L358 148 L448 148 L442 108" stroke-width="2" opacity="0.85"/>
+    <line x1="400" y1="108" x2="400" y2="148" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="300" cy="182" r="26"/>
+    <circle cx="300" cy="182" r="11" opacity="0.8"/>
+    <circle cx="504" cy="182" r="26"/>
+    <circle cx="504" cy="182" r="11" opacity="0.8"/>
+    <line x1="232" y1="168" x2="248" y2="168" stroke-width="1.5" opacity="0.7"/>
+    <line x1="552" y1="166" x2="568" y2="166" stroke-width="1.5" opacity="0.7"/>
   </g>
-  <g fill="#38bdf8" opacity="0.9">
-    <circle cx="318" cy="190" r="4"/>
-    <circle cx="482" cy="190" r="4"/>
-    <circle cx="330" cy="268" r="4"/>
-    <circle cx="470" cy="268" r="4"/>
+  <!-- dimension line -->
+  <g stroke="#ffffff" opacity="0.75">
+    <line x1="300" y1="226" x2="504" y2="226" stroke-width="1.5"/>
+    <line x1="300" y1="216" x2="300" y2="236" stroke-width="1.5"/>
+    <line x1="504" y1="216" x2="504" y2="236" stroke-width="1.5"/>
   </g>
+  <text x="402" y="221" text-anchor="middle" font-family="Consolas, ui-monospace, monospace" font-size="13" fill="#ffffff" opacity="0.85">wheelbase 2.7m</text>
 
-  <!-- entity tables -->
+  <!-- ER schema -->
+  <g stroke="#ffffff" stroke-width="1.8" opacity="0.85">
+    <line x1="163" y1="298" x2="330" y2="322"/>
+    <line x1="637 " y1="298" x2="470" y2="322"/>
+    <line x1="163" y1="322" x2="163" y2="298"/>
+    <line x1="637" y1="322" x2="637" y2="298"/>
+    <!-- crow's feet into vehicles/sales -->
+    <path d="M330 322 L318 314 M330 322 L318 322 M330 322 L318 330" fill="none"/>
+    <path d="M470 322 L482 314 M470 322 L482 322 M470 322 L482 330" fill="none"/>
+  </g>
   <g font-family="Consolas, ui-monospace, monospace" font-size="15" text-anchor="middle">
-    <rect x="72" y="146" width="150" height="42" rx="9" fill="#16203a" stroke="#38bdf8" stroke-width="2"/>
-    <text x="147" y="172" fill="#a8dcf5">customers</text>
-    <rect x="578" y="146" width="150" height="42" rx="9" fill="#16203a" stroke="#38bdf8" stroke-width="2"/>
-    <text x="653" y="172" fill="#a8dcf5">vehicles</text>
-    <rect x="120" y="300" width="132" height="42" rx="9" fill="#16203a" stroke="#fb923c" stroke-width="2"/>
-    <text x="186" y="326" fill="#f8c89d">sales</text>
-    <rect x="548" y="300" width="132" height="42" rx="9" fill="#16203a" stroke="#fb923c" stroke-width="2"/>
-    <text x="614" y="326" fill="#f8c89d">service</text>
+    <rect x="88" y="272" width="150" height="40" rx="4" fill="#153a7e" stroke="#ffffff" stroke-width="2"/>
+    <text x="163" y="297" fill="#ffffff">CUSTOMERS</text>
+    <rect x="330" y="302" width="140" height="40" rx="4" fill="#153a7e" stroke="#ffffff" stroke-width="2.5"/>
+    <text x="400" y="327" fill="#ffffff">SALES</text>
+    <rect x="562" y="272" width="150" height="40" rx="4" fill="#153a7e" stroke="#ffffff" stroke-width="2"/>
+    <text x="637" y="297" fill="#ffffff">VEHICLES</text>
+    <rect x="238" y="356" width="150" height="40" rx="4" fill="#153a7e" stroke="#ffffff" stroke-width="2"/>
+    <text x="313" y="381" fill="#ffffff">SERVICE</text>
+    <rect x="422" y="356" width="176" height="40" rx="4" fill="#153a7e" stroke="#ffffff" stroke-width="2"/>
+    <text x="510" y="381" fill="#ffffff">APPOINTMENTS</text>
+  </g>
+  <g stroke="#ffffff" stroke-width="1.8" opacity="0.85">
+    <line x1="352" y1="342" x2="330" y2="356"/>
+    <line x1="448" y1="342" x2="470" y2="356"/>
   </g>
 
-  <!-- database cylinder -->
+  <!-- title block -->
   <g>
-    <path d="M318 140 L318 290 A82 26 0 0 0 482 290 L482 140 Z" fill="url(#dbBody)"/>
-    <path d="M318 240 A82 26 0 0 0 482 240" fill="none" stroke="#0d2a66" stroke-width="3" opacity="0.55"/>
-    <path d="M318 190 A82 26 0 0 0 482 190" fill="none" stroke="#0d2a66" stroke-width="3" opacity="0.55"/>
-    <ellipse cx="400" cy="140" rx="82" ry="26" fill="#7dd3fc"/>
-    <ellipse cx="400" cy="140" rx="82" ry="26" fill="none" stroke="#0d2a66" stroke-width="3" opacity="0.4"/>
-    <!-- car silhouette -->
-    <g fill="#0d1526">
-      <path d="M352 132 C358 122 368 116 382 116 L418 116 C432 116 442 122 448 132 L456 134 C462 135 466 139 466 144 L466 148 L334 148 L334 144 C334 139 338 135 344 134 Z"/>
-    </g>
-    <g fill="#ffffff">
-      <circle cx="362" cy="148" r="8"/>
-      <circle cx="438" cy="148" r="8"/>
-    </g>
-    <g fill="#0d1526">
-      <circle cx="362" cy="148" r="4"/>
-      <circle cx="438" cy="148" r="4"/>
-    </g>
+    <rect x="560" y="52" width="212" height="66" fill="#153a7e" stroke="#ffffff" stroke-width="2" opacity="0.95"/>
+    <line x1="560" y1="85" x2="772" y2="85" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+    <text x="572" y="74" font-family="Consolas, ui-monospace, monospace" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="1.5">DEALERSHIP DB</text>
+    <text x="572" y="106" font-family="Consolas, ui-monospace, monospace" font-size="12" fill="#ffffff" opacity="0.8">MySQL · CS 4347 · SCALE 1:1</text>
   </g>
-
-  <!-- Wordmark -->
-  <text x="400" y="408" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700"><tspan fill="#e9eefa">Dealership </tspan><tspan fill="#38bdf8">DB</tspan></text>
 </svg>

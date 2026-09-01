@@ -1,71 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="jpTitle jpDesc">
   <title id="jpTitle">JobPilot</title>
-  <desc id="jpDesc">A paper plane sweeping toward a job application form whose fields are being autofilled and checked off.</desc>
+  <desc id="jpDesc">A paper plane flying through open sky, towing a banner with a resume file on it.</desc>
   <defs>
-    <radialGradient id="jpGlow1" cx="0.15" cy="0.2" r="0.7">
-      <stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="jpGlow2" cx="0.85" cy="0.85" r="0.7">
-      <stop offset="0" stop-color="#f97316" stop-opacity="0.15"/>
-      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="jpPlane" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7dd3fc"/>
-      <stop offset="1" stop-color="#2563eb"/>
+    <linearGradient id="jpSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fc4f2"/>
+      <stop offset="1" stop-color="#dcefFB"/>
     </linearGradient>
-    <linearGradient id="jpBtn" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#f97316"/>
-      <stop offset="1" stop-color="#fb923c"/>
-    </linearGradient>
+    <radialGradient id="jpSun" cx="0.85" cy="0.12" r="0.45">
+      <stop offset="0" stop-color="#fff7d6" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#fff7d6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="jpSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#4a7fae" flood-opacity="0.25"/>
+    </filter>
   </defs>
 
-  <rect width="800" height="450" fill="#0d1526"/>
-  <rect width="800" height="450" fill="url(#jpGlow1)"/>
-  <rect width="800" height="450" fill="url(#jpGlow2)"/>
+  <!-- sky -->
+  <rect width="800" height="450" fill="url(#jpSky)"/>
+  <rect width="800" height="450" fill="url(#jpSun)"/>
 
-  <!-- flight path -->
-  <path d="M96 356 C170 336 160 220 236 178 C270 160 320 148 372 146"
-        fill="none" stroke="#fb923c" stroke-width="3" stroke-dasharray="1 14" stroke-linecap="round"/>
+  <!-- clouds -->
+  <g fill="#ffffff">
+    <g opacity="0.95">
+      <ellipse cx="128" cy="96" rx="58" ry="22"/>
+      <ellipse cx="168" cy="82" rx="42" ry="20"/>
+      <ellipse cx="92" cy="84" rx="34" ry="16"/>
+    </g>
+    <g opacity="0.8">
+      <ellipse cx="672" cy="330" rx="64" ry="24"/>
+      <ellipse cx="716" cy="316" rx="44" ry="20"/>
+      <ellipse cx="632" cy="318" rx="36" ry="17"/>
+    </g>
+    <g opacity="0.65">
+      <ellipse cx="420" cy="66" rx="46" ry="16"/>
+      <ellipse cx="452" cy="56" rx="30" ry="13"/>
+    </g>
+    <g opacity="0.5">
+      <ellipse cx="96" cy="330" rx="44" ry="16"/>
+      <ellipse cx="126" cy="320" rx="30" ry="13"/>
+    </g>
+  </g>
+
+  <!-- flight path with loop -->
+  <path d="M58 388 C140 372 180 330 216 296 C240 274 268 268 276 288 C284 308 258 320 244 306 C230 292 244 258 282 234 C318 212 366 196 420 188"
+        fill="none" stroke="#3a6ea8" stroke-width="3" stroke-dasharray="1 13" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- banner tow line -->
+  <line x1="512" y1="196" x2="580" y2="226" stroke="#3a6ea8" stroke-width="2"/>
 
   <!-- paper plane -->
-  <g transform="rotate(14 210 150)">
-    <path d="M148 160 L288 116 L216 208 Z" fill="url(#jpPlane)"/>
-    <path d="M148 160 L216 176 L216 208 Z" fill="#1d4ed8"/>
-    <path d="M288 116 L216 176 L216 208 Z" fill="#38bdf8" opacity="0.85"/>
-    <path d="M148 160 L288 116 L216 176 Z" fill="#a5defa" opacity="0.35"/>
+  <g transform="rotate(-8 470 180)" filter="url(#jpSoft)">
+    <path d="M400 196 L540 152 L468 244 Z" fill="#ffffff"/>
+    <path d="M400 196 L468 212 L468 244 Z" fill="#c9dcee"/>
+    <path d="M540 152 L468 212 L468 244 Z" fill="#e8f1f9"/>
+    <path d="M400 196 L540 152 L468 212 Z" fill="#ffffff"/>
+    <path d="M400 196 L540 152 M468 212 L540 152" stroke="#9dbdd8" stroke-width="2" fill="none"/>
   </g>
 
-  <!-- application form -->
-  <g>
-    <rect x="440" y="78" width="272" height="266" rx="14" fill="#f7f9ff" stroke="#0b1020" stroke-width="3"/>
-    <text x="464" y="116" font-family="'Segoe UI', system-ui, sans-serif" font-size="17" font-weight="700" fill="#0b1020">Application</text>
-    <rect x="464" y="132" width="128" height="7" rx="3.5" fill="#8592a8" opacity="0.5"/>
-
-    <!-- field 1 -->
-    <rect x="464" y="156" width="184" height="30" rx="7" fill="#ffffff" stroke="#8592a8" stroke-width="1.5"/>
-    <rect x="472" y="167" width="132" height="8" rx="4" fill="#2563eb"/>
-    <circle cx="674" cy="171" r="13" fill="#34d399"/>
-    <path d="M668 171 L672 176 L681 166" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- field 2 -->
-    <rect x="464" y="198" width="184" height="30" rx="7" fill="#ffffff" stroke="#8592a8" stroke-width="1.5"/>
-    <rect x="472" y="209" width="104" height="8" rx="4" fill="#2563eb"/>
-    <circle cx="674" cy="213" r="13" fill="#34d399"/>
-    <path d="M668 213 L672 218 L681 208" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- field 3: resume attach -->
-    <rect x="464" y="240" width="184" height="30" rx="7" fill="#ffffff" stroke="#8592a8" stroke-width="1.5" stroke-dasharray="6 4"/>
-    <text x="476" y="260" font-family="Consolas, ui-monospace, monospace" font-size="14" fill="#2563eb">resume_yash.pdf</text>
-    <circle cx="674" cy="255" r="13" fill="#34d399"/>
-    <path d="M668 255 L672 260 L681 250" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- submit -->
-    <rect x="464" y="292" width="112" height="34" rx="9" fill="url(#jpBtn)"/>
-    <text x="520" y="314" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Apply</text>
-    <text x="648" y="315" text-anchor="end" font-family="Consolas, ui-monospace, monospace" font-size="13" fill="#8592a8">tracked ✓</text>
+  <!-- towed banner -->
+  <g filter="url(#jpSoft)">
+    <path d="M580 214 L748 206 L744 252 L576 260 Z" fill="#ffffff"/>
+    <path d="M580 214 L576 260 L562 250 L566 224 Z" fill="#d5e5f2"/>
   </g>
+  <text x="662" y="240" text-anchor="middle" font-family="Consolas, ui-monospace, monospace" font-size="17" font-weight="600" fill="#17456e" transform="rotate(-2 662 236)">resume.pdf</text>
+  <circle cx="738" cy="222" r="9" fill="#34a56f"/>
+  <path d="M734 222 L737 225 L743 218" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- Wordmark -->
-  <text x="400" y="408" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700"><tspan fill="#e9eefa">Job</tspan><tspan fill="#fb923c">Pilot</tspan></text>
+  <!-- wordmark -->
+  <text x="400" y="416" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="32" font-weight="700"><tspan fill="#17456e">Job</tspan><tspan fill="#e8760c">Pilot</tspan></text>
 </svg>

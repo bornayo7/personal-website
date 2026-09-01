@@ -1,74 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="mtTitle mtDesc">
   <title id="mtTitle">MangaTranslate</title>
-  <desc id="mtDesc">A manga panel with Japanese dialogue translated in place to English, with an arrow between the two panels.</desc>
+  <desc id="mtDesc">A manga page where one speech bubble has been selected and translated to English in place.</desc>
   <defs>
-    <radialGradient id="mtGlow1" cx="0.2" cy="0.1" r="0.7">
-      <stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="mtGlow2" cx="0.85" cy="0.9" r="0.7">
-      <stop offset="0" stop-color="#f97316" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="mtArrow" x1="346" y1="225" x2="456" y2="225" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#fb923c"/>
-    </linearGradient>
-    <pattern id="mtTone" width="14" height="14" patternUnits="userSpaceOnUse">
-      <circle cx="4" cy="4" r="2.1" fill="#0b1020" opacity="0.16"/>
-      <circle cx="11" cy="11" r="2.1" fill="#0b1020" opacity="0.16"/>
+    <pattern id="mtTone" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.9" fill="#101010"/>
+      <circle cx="9" cy="9" r="1.9" fill="#101010"/>
     </pattern>
   </defs>
 
-  <rect width="800" height="450" fill="#0d1526"/>
-  <rect width="800" height="450" fill="url(#mtGlow1)"/>
-  <rect width="800" height="450" fill="url(#mtGlow2)"/>
+  <!-- paper -->
+  <rect width="800" height="450" fill="#fbfaf6"/>
 
-  <!-- Left panel: original Japanese -->
-  <g transform="rotate(-4 205 225)">
-    <rect x="88" y="88" width="234" height="262" rx="12" fill="#f7f9ff" stroke="#0b1020" stroke-width="4"/>
-    <path d="M88 100 L322 100 L322 168 L88 168 Z" fill="url(#mtTone)" opacity="0.8"/>
-    <!-- speed lines -->
-    <g stroke="#0b1020" stroke-width="2" opacity="0.5">
-      <line x1="108" y1="322" x2="150" y2="296"/>
-      <line x1="122" y1="334" x2="168" y2="306"/>
-      <line x1="300" y1="330" x2="258" y2="304"/>
-      <line x1="288" y1="340" x2="244" y2="314"/>
-    </g>
-    <ellipse cx="205" cy="200" rx="84" ry="58" fill="#ffffff" stroke="#0b1020" stroke-width="3.5"/>
-    <path d="M176 250 L160 286 L204 256 Z" fill="#ffffff" stroke="#0b1020" stroke-width="3.5" stroke-linejoin="round"/>
-    <rect x="176" y="246" width="58" height="10" fill="#ffffff"/>
-    <text x="205" y="196" text-anchor="middle" font-family="'Yu Gothic UI', 'Yu Gothic', 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif" font-size="26" font-weight="700" fill="#0b1020">こんに</text>
-    <text x="205" y="226" text-anchor="middle" font-family="'Yu Gothic UI', 'Yu Gothic', 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif" font-size="26" font-weight="700" fill="#0b1020">ちは！</text>
-  </g>
-
-  <!-- Right panel: translated overlay -->
-  <g transform="rotate(4 595 225)">
-    <rect x="478" y="88" width="234" height="262" rx="12" fill="#f7f9ff" stroke="#0b1020" stroke-width="4"/>
-    <path d="M478 100 L712 100 L712 168 L478 168 Z" fill="url(#mtTone)" opacity="0.8"/>
-    <g stroke="#0b1020" stroke-width="2" opacity="0.5">
-      <line x1="498" y1="322" x2="540" y2="296"/>
-      <line x1="512" y1="334" x2="558" y2="306"/>
-      <line x1="690" y1="330" x2="648" y2="304"/>
-      <line x1="678" y1="340" x2="634" y2="314"/>
-    </g>
-    <ellipse cx="595" cy="200" rx="84" ry="58" fill="#ffffff" stroke="#0b1020" stroke-width="3.5"/>
-    <path d="M566 250 L550 286 L594 256 Z" fill="#ffffff" stroke="#0b1020" stroke-width="3.5" stroke-linejoin="round"/>
-    <rect x="566" y="246" width="58" height="10" fill="#ffffff"/>
-    <text x="595" y="212" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="800" fill="#0b1020" letter-spacing="0.5">HELLO!</text>
-    <!-- subtle overlay tint marking the redrawn region -->
-    <ellipse cx="595" cy="200" rx="84" ry="58" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="7 6" opacity="0.85"/>
-  </g>
-
-  <!-- Translate arrow -->
+  <!-- Panel A: original Japanese -->
   <g>
-    <path d="M346 225 L436 225" stroke="url(#mtArrow)" stroke-width="9" stroke-linecap="round"/>
-    <path d="M424 202 L456 225 L424 248 Z" fill="#fb923c"/>
-    <!-- AI sparkle -->
-    <path d="M400 158 L406 176 L424 182 L406 188 L400 206 L394 188 L376 182 L394 176 Z" fill="#38bdf8"/>
-    <circle cx="428" cy="162" r="4" fill="#fb923c"/>
+    <polygon points="28,28 388,28 352,250 28,250" fill="#ffffff" stroke="#101010" stroke-width="4"/>
+    <clipPath id="mtClipA"><polygon points="28,28 388,28 352,250 28,250"/></clipPath>
+    <g clip-path="url(#mtClipA)">
+      <polygon points="28,28 150,28 28,140" fill="url(#mtTone)" opacity="0.35"/>
+      <g stroke="#101010" stroke-width="1.8" opacity="0.75">
+        <line x1="360" y1="40" x2="290" y2="92"/>
+        <line x1="372" y1="66" x2="300" y2="112"/>
+        <line x1="36" y1="242" x2="98" y2="196"/>
+        <line x1="70" y1="246" x2="124" y2="206"/>
+      </g>
+      <ellipse cx="204" cy="132" rx="92" ry="62" fill="#ffffff" stroke="#101010" stroke-width="3.5"/>
+      <path d="M172 186 L150 226 L204 192 Z" fill="#ffffff" stroke="#101010" stroke-width="3.5" stroke-linejoin="round"/>
+      <rect x="172" y="182" width="60" height="10" fill="#ffffff"/>
+      <text x="204" y="122" text-anchor="middle" font-family="'Yu Gothic UI', 'Yu Gothic', 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif" font-size="27" font-weight="700" fill="#101010">こんに</text>
+      <text x="204" y="154" text-anchor="middle" font-family="'Yu Gothic UI', 'Yu Gothic', 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif" font-size="27" font-weight="700" fill="#101010">ちは！</text>
+    </g>
   </g>
 
-  <!-- Wordmark -->
-  <text x="400" y="408" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700"><tspan fill="#e9eefa">Manga</tspan><tspan fill="#38bdf8">Translate</tspan></text>
+  <!-- Panel B: translated, selected by the extension -->
+  <g>
+    <polygon points="412,28 772,28 772,250 376,250" fill="#ffffff" stroke="#101010" stroke-width="4"/>
+    <clipPath id="mtClipB"><polygon points="412,28 772,28 772,250 376,250"/></clipPath>
+    <g clip-path="url(#mtClipB)">
+      <polygon points="772,28 650,28 772,140" fill="url(#mtTone)" opacity="0.35"/>
+      <g stroke="#101010" stroke-width="1.8" opacity="0.75">
+        <line x1="420" y1="44" x2="486" y2="94"/>
+        <line x1="408" y1="70" x2="478" y2="114"/>
+        <line x1="760" y1="240" x2="700" y2="198"/>
+        <line x1="726" y1="246" x2="672" y2="208"/>
+      </g>
+      <ellipse cx="590" cy="132" rx="92" ry="62" fill="#ffffff" stroke="#101010" stroke-width="3.5"/>
+      <path d="M558 186 L536 226 L590 192 Z" fill="#ffffff" stroke="#101010" stroke-width="3.5" stroke-linejoin="round"/>
+      <rect x="558" y="182" width="60" height="10" fill="#ffffff"/>
+      <text x="590" y="142" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="31" font-weight="800" fill="#101010" letter-spacing="0.5">HELLO!</text>
+      <!-- selection box from the extension -->
+      <g stroke="#0891b2" stroke-width="3.5" fill="none">
+        <path d="M482 76 L482 60 L502 60"/>
+        <path d="M678 60 L698 60 L698 76"/>
+        <path d="M698 188 L698 204 L678 204"/>
+        <path d="M502 204 L482 204 L482 188"/>
+      </g>
+      <rect x="482" y="60" width="216" height="144" fill="#0891b2" opacity="0.06"/>
+    </g>
+  </g>
+
+  <!-- gutter arrow -->
+  <g>
+    <path d="M356 139 L396 139" stroke="#0891b2" stroke-width="6" stroke-linecap="round"/>
+    <path d="M390 126 L410 139 L390 152 Z" fill="#0891b2"/>
+  </g>
+
+  <!-- Panel C: title band -->
+  <g>
+    <rect x="28" y="272" width="744" height="92" fill="#101010"/>
+    <g stroke="#fbfaf6" stroke-width="2" opacity="0.5">
+      <line x1="40" y1="284" x2="120" y2="284"/>
+      <line x1="40" y1="352" x2="96" y2="352"/>
+      <line x1="680" y1="284" x2="760" y2="284"/>
+      <line x1="704" y1="352" x2="760" y2="352"/>
+    </g>
+    <text x="400" y="330" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="34" font-weight="800" fill="#fbfaf6" letter-spacing="6">MANGATRANSLATE</text>
+  </g>
+
+  <!-- page footer -->
+  <text x="400" y="416" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" fill="#9a958c">— 05 —</text>
+  <polygon points="772,450 772,398 720,450" fill="url(#mtTone)" opacity="0.3"/>
 </svg>
