@@ -1,5 +1,6 @@
 import mangatranslate from "../../Assets/Projects/mangatranslate.svg";
 import srsapp from "../../Assets/Projects/srsapp.svg";
+import skillmatch from "../../Assets/Projects/skillmatch.svg";
 import toyotatinder from "../../Assets/Projects/toyotatinder.png";
 import cometpark from "../../Assets/Projects/cometpark.png";
 import musicGenre from "../../Assets/Projects/ais_utd_logo.png";
@@ -23,6 +24,14 @@ const projectsData = [
       "A local-first spaced-repetition PWA that mixes the best parts of the tools I actually study with: WaniKani's stage ladders and typed answers, Anki's build-your-own decks, and Bunpro's ghost reviews and cram mode. An AI layer generates decks on demand, everything lives offline in IndexedDB, and an MCP server lets AI agents plug into your reviews.",
     ghLink: "https://github.com/bornayo7/srs-app",
     tags: ["React", "TypeScript", "PWA", "IndexedDB"],
+  },
+  {
+    imgPath: skillmatch,
+    title: "SkillMatch AI",
+    description:
+      "An explainable talent-matching platform. It parses resumes, scores candidates against target roles with evidence-backed reasoning instead of a black-box number, and turns the gaps it finds into recommended learning paths. Role-based dashboards give recruiters, hiring managers, and employees each their own workflow.",
+    ghLink: "https://github.com/bornayo7/skillmatch-ai",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "AWS S3"],
   },
   {
     imgPath: toyotatinder,

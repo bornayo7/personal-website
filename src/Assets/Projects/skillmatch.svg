@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="smTitle smDesc">
+  <title id="smTitle">SkillMatch AI</title>
+  <desc id="smDesc">A candidate node and a role node connected through a match-score ring, surrounded by skill chips.</desc>
+  <defs>
+    <radialGradient id="smGlow1" cx="0.2" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="smGlow2" cx="0.85" cy="0.8" r="0.7">
+      <stop offset="0" stop-color="#0ea5e9" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="smRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="#0d1526"/>
+  <rect width="800" height="450" fill="url(#smGlow1)"/>
+  <rect width="800" height="450" fill="url(#smGlow2)"/>
+
+  <!-- connectors -->
+  <g stroke-width="2.5" fill="none">
+    <path d="M232 205 L326 205" stroke="#a78bfa" stroke-dasharray="2 8" stroke-linecap="round"/>
+    <path d="M474 205 L568 205" stroke="#38bdf8" stroke-dasharray="2 8" stroke-linecap="round"/>
+    <path d="M262 112 L344 158" stroke="#a78bfa" stroke-dasharray="2 8" stroke-linecap="round" opacity="0.6"/>
+    <path d="M540 106 L456 156" stroke="#38bdf8" stroke-dasharray="2 8" stroke-linecap="round" opacity="0.6"/>
+    <path d="M292 330 L352 262" stroke="#a78bfa" stroke-dasharray="2 8" stroke-linecap="round" opacity="0.6"/>
+    <path d="M512 332 L448 262" stroke="#38bdf8" stroke-dasharray="2 8" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- candidate node -->
+  <g>
+    <circle cx="182" cy="205" r="48" fill="#16203a" stroke="#a78bfa" stroke-width="3"/>
+    <circle cx="182" cy="192" r="15" fill="#a78bfa"/>
+    <path d="M154 234 C154 216 210 216 210 234" fill="#a78bfa"/>
+    <text x="182" y="282" text-anchor="middle" font-family="Consolas, ui-monospace, monospace" font-size="14" fill="#7286a3">candidate</text>
+  </g>
+
+  <!-- role node -->
+  <g>
+    <circle cx="618" cy="205" r="48" fill="#16203a" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="590" y="194" width="56" height="34" rx="6" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+    <path d="M607 194 L607 188 A5 5 0 0 1 612 183 L624 183 A5 5 0 0 1 629 188 L629 194" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+    <line x1="590" y1="210" x2="612" y2="210" stroke="#38bdf8" stroke-width="3.5"/>
+    <line x1="624" y1="210" x2="646" y2="210" stroke="#38bdf8" stroke-width="3.5"/>
+    <rect x="612" y="205" width="12" height="10" rx="2" fill="#38bdf8"/>
+    <text x="618" y="282" text-anchor="middle" font-family="Consolas, ui-monospace, monospace" font-size="14" fill="#7286a3">role</text>
+  </g>
+
+  <!-- match ring -->
+  <g>
+    <circle cx="400" cy="205" r="66" fill="#0d1526" stroke="#2c3a5c" stroke-width="10"/>
+    <circle cx="400" cy="205" r="66" fill="none" stroke="url(#smRing)" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="381.5 414.7" transform="rotate(-90 400 205)"/>
+    <text x="400" y="203" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="700" fill="#e9eefa">92%</text>
+    <text x="400" y="230" text-anchor="middle" font-family="Consolas, ui-monospace, monospace" font-size="14" fill="#7286a3">match</text>
+  </g>
+
+  <!-- skill chips -->
+  <g font-family="Consolas, ui-monospace, monospace" font-size="15" text-anchor="middle">
+    <rect x="216" y="76" width="88" height="30" rx="15" fill="#a78bfa" opacity="0.14"/>
+    <rect x="216" y="76" width="88" height="30" rx="15" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+    <text x="260" y="96" fill="#cfc4f7">python</text>
+
+    <rect x="502" y="72" width="78" height="30" rx="15" fill="#38bdf8" opacity="0.14"/>
+    <rect x="502" y="72" width="78" height="30" rx="15" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.7"/>
+    <text x="541" y="92" fill="#a8dcf5">sql</text>
+
+    <rect x="238" y="322" width="98" height="30" rx="15" fill="#a78bfa" opacity="0.14"/>
+    <rect x="238" y="322" width="98" height="30" rx="15" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+    <text x="287" y="342" fill="#cfc4f7">react</text>
+
+    <rect x="474" y="324" width="112" height="30" rx="15" fill="#fb923c" opacity="0.14"/>
+    <rect x="474" y="324" width="112" height="30" rx="15" fill="none" stroke="#fb923c" stroke-width="1.5" opacity="0.7"/>
+    <text x="530" y="344" fill="#f8c89d">aws · gap</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="400" y="408" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700"><tspan fill="#e9eefa">SkillMatch </tspan><tspan fill="#a78bfa">AI</tspan></text>
+</svg>
