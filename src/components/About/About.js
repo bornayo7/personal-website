@@ -44,7 +44,7 @@ function About() {
             <p>
               Outside of internships, most of my favorite building has happened at hackathons
               with friends: ToyotaTinder at HackUTD 2025, CometPark the year before, and
-              VisionTranslate at HackSMU, which I'm still improving today. I also worked as an
+              MangaTranslate, which started at HackSMU and is still growing today. I also worked as an
               assistant manager at Kumon, which taught me more about explaining hard things
               simply than any class has.
             </p>

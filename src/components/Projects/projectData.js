@@ -1,4 +1,4 @@
-import visiontranslate from "../../Assets/Projects/visiontranslate.svg";
+import mangatranslate from "../../Assets/Projects/mangatranslate.svg";
 import toyotatinder from "../../Assets/Projects/toyotatinder.png";
 import cometpark from "../../Assets/Projects/cometpark.png";
 import musicGenre from "../../Assets/Projects/ais_utd_logo.png";
@@ -8,13 +8,12 @@ import { REPO_URL, SITE_URL } from "../../data/links";
 
 const projectsData = [
   {
-    imgPath: visiontranslate,
-    title: "VisionTranslate",
+    imgPath: mangatranslate,
+    title: "MangaTranslate",
     description:
-      "A Chrome extension that translates the text inside images, not just the page text. It detects images, canvases, and background images on any webpage, runs OCR, and redraws translated overlays in place so the layout survives, with LLM translation, caching, and read-aloud. Started at HackSMU; I'm still polishing it.",
-    ghLink: "https://github.com/bornayo7/Hack-SMU-VII",
-    tags: ["Chrome MV3", "React", "OCR", "LLMs"],
-    imageClassName: "contain",
+      "A Chrome extension that translates manga right on the page. It finds every image and canvas, runs OCR through engines like MangaOCR and PaddleOCR, routes the text through your choice of LLM provider, and redraws layout-aware translated overlays in place. It started as my HackSMU build and grew into a full project with a FastAPI backend and its own site.",
+    ghLink: "https://github.com/bornayo7/Manga-Translate",
+    tags: ["Chrome MV3", "React", "FastAPI", "OCR"],
   },
   {
     imgPath: toyotatinder,

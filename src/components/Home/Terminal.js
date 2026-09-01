@@ -31,7 +31,7 @@ function Terminal() {
           <span className="t-prompt">$ </span>
           <span className="t-cmd">./whats-next.sh</span>
           <span className="t-out">
-            → polishing VisionTranslate{"\n"}→ finishing senior year{"\n"}→ open to what comes after
+            → polishing MangaTranslate{"\n"}→ finishing senior year{"\n"}→ open to what comes after
           </span>
         </span>
         <span className="t-line">
