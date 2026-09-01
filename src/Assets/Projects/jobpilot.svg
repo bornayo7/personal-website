@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="jpTitle jpDesc">
+  <title id="jpTitle">JobPilot</title>
+  <desc id="jpDesc">A paper plane sweeping toward a job application form whose fields are being autofilled and checked off.</desc>
+  <defs>
+    <radialGradient id="jpGlow1" cx="0.15" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="jpGlow2" cx="0.85" cy="0.85" r="0.7">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="jpPlane" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="jpBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="#0d1526"/>
+  <rect width="800" height="450" fill="url(#jpGlow1)"/>
+  <rect width="800" height="450" fill="url(#jpGlow2)"/>
+
+  <!-- flight path -->
+  <path d="M96 356 C170 336 160 220 236 178 C270 160 320 148 372 146"
+        fill="none" stroke="#fb923c" stroke-width="3" stroke-dasharray="1 14" stroke-linecap="round"/>
+
+  <!-- paper plane -->
+  <g transform="rotate(14 210 150)">
+    <path d="M148 160 L288 116 L216 208 Z" fill="url(#jpPlane)"/>
+    <path d="M148 160 L216 176 L216 208 Z" fill="#1d4ed8"/>
+    <path d="M288 116 L216 176 L216 208 Z" fill="#38bdf8" opacity="0.85"/>
+    <path d="M148 160 L288 116 L216 176 Z" fill="#a5defa" opacity="0.35"/>
+  </g>
+
+  <!-- application form -->
+  <g>
+    <rect x="440" y="78" width="272" height="266" rx="14" fill="#f7f9ff" stroke="#0b1020" stroke-width="3"/>
+    <text x="464" y="116" font-family="'Segoe UI', system-ui, sans-serif" font-size="17" font-weight="700" fill="#0b1020">Application</text>
+    <rect x="464" y="132" width="128" height="7" rx="3.5" fill="#8592a8" opacity="0.5"/>
+
+    <!-- field 1 -->
+    <rect x="464" y="156" width="184" height="30" rx="7" fill="#ffffff" stroke="#8592a8" stroke-width="1.5"/>
+    <rect x="472" y="167" width="132" height="8" rx="4" fill="#2563eb"/>
+    <circle cx="674" cy="171" r="13" fill="#34d399"/>
+    <path d="M668 171 L672 176 L681 166" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- field 2 -->
+    <rect x="464" y="198" width="184" height="30" rx="7" fill="#ffffff" stroke="#8592a8" stroke-width="1.5"/>
+    <rect x="472" y="209" width="104" height="8" rx="4" fill="#2563eb"/>
+    <circle cx="674" cy="213" r="13" fill="#34d399"/>
+    <path d="M668 213 L672 218 L681 208" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- field 3: resume attach -->
+    <rect x="464" y="240" width="184" height="30" rx="7" fill="#ffffff" stroke="#8592a8" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="476" y="260" font-family="Consolas, ui-monospace, monospace" font-size="14" fill="#2563eb">resume_yash.pdf</text>
+    <circle cx="674" cy="255" r="13" fill="#34d399"/>
+    <path d="M668 255 L672 260 L681 250" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- submit -->
+    <rect x="464" y="292" width="112" height="34" rx="9" fill="url(#jpBtn)"/>
+    <text x="520" y="314" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Apply</text>
+    <text x="648" y="315" text-anchor="end" font-family="Consolas, ui-monospace, monospace" font-size="13" fill="#8592a8">tracked ✓</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="400" y="408" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700"><tspan fill="#e9eefa">Job</tspan><tspan fill="#fb923c">Pilot</tspan></text>
+</svg>

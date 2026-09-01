@@ -2,6 +2,7 @@ import mangatranslate from "../../Assets/Projects/mangatranslate.svg";
 import srsapp from "../../Assets/Projects/srsapp.svg";
 import skillmatch from "../../Assets/Projects/skillmatch.svg";
 import dealershipdb from "../../Assets/Projects/dealershipdb.svg";
+import jobpilot from "../../Assets/Projects/jobpilot.svg";
 import toyotatinder from "../../Assets/Projects/toyotatinder.png";
 import cometpark from "../../Assets/Projects/cometpark.png";
 import musicGenre from "../../Assets/Projects/ais_utd_logo.png";
@@ -17,6 +18,14 @@ const projectsData = [
       "A Chrome extension that translates manga right on the page. It finds every image and canvas, runs OCR through engines like MangaOCR and PaddleOCR, routes the text through your choice of LLM provider, and redraws layout-aware translated overlays in place. It started as my HackSMU build and grew into a full project with a FastAPI backend and its own site.",
     ghLink: "https://github.com/bornayo7/Manga-Translate",
     tags: ["Chrome MV3", "React", "FastAPI", "OCR"],
+  },
+  {
+    imgPath: jobpilot,
+    title: "JobPilot",
+    description:
+      "A browser extension that takes the busywork out of job applications. It autofills forms from a stored profile with a three-tier fill engine, reads the posting you are on, and generates a tailored ATS-safe resume and cover letter as PDF or DOCX. An answers bank and a built-in tracker keep every application straight, backed by 126 passing tests.",
+    ghLink: "https://github.com/bornayo7/jobpilot",
+    tags: ["TypeScript", "WXT", "React", "IndexedDB"],
   },
   {
     imgPath: srsapp,
