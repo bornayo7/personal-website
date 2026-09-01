@@ -1,4 +1,5 @@
 import mangatranslate from "../../Assets/Projects/mangatranslate.svg";
+import srsapp from "../../Assets/Projects/srsapp.svg";
 import toyotatinder from "../../Assets/Projects/toyotatinder.png";
 import cometpark from "../../Assets/Projects/cometpark.png";
 import musicGenre from "../../Assets/Projects/ais_utd_logo.png";
@@ -14,6 +15,14 @@ const projectsData = [
       "A Chrome extension that translates manga right on the page. It finds every image and canvas, runs OCR through engines like MangaOCR and PaddleOCR, routes the text through your choice of LLM provider, and redraws layout-aware translated overlays in place. It started as my HackSMU build and grew into a full project with a FastAPI backend and its own site.",
     ghLink: "https://github.com/bornayo7/Manga-Translate",
     tags: ["Chrome MV3", "React", "FastAPI", "OCR"],
+  },
+  {
+    imgPath: srsapp,
+    title: "SRS App",
+    description:
+      "A local-first spaced-repetition PWA that mixes the best parts of the tools I actually study with: WaniKani's stage ladders and typed answers, Anki's build-your-own decks, and Bunpro's ghost reviews and cram mode. An AI layer generates decks on demand, everything lives offline in IndexedDB, and an MCP server lets AI agents plug into your reviews.",
+    ghLink: "https://github.com/bornayo7/srs-app",
+    tags: ["React", "TypeScript", "PWA", "IndexedDB"],
   },
   {
     imgPath: toyotatinder,
